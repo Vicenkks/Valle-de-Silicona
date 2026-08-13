@@ -7,7 +7,7 @@ Team project to front-end course.
 |---|---|
 | ---- | Scrum Master |
 | Vicente Huilcaman | Developer |
-| ------ | Product Owner |
+| Javier Gutiérrez | Product Owner |
 | ------- | QA/Tester |
 | ------ | Developer |
 
