@@ -5,11 +5,12 @@ Team project to front-end course.
 
 | Nombre | Rol ágil |
 |---|---|
-| ---- | Scrum Master |
+| Rallen I. Castro | Scrum Master |
 | Vicente Huilcaman | Developer |
-| Javier Gutiérrez | Product Owner |
-| ------- | QA/Tester |
-| ------ | Developer |
+| Javier Gutierrez | Product Owner |
+| Josefa I.  | QA/Tester |
+| Keisy D. | Developer |
+| Maria R.  | QA/Tester |
 
 ## Descripción breve
 
@@ -17,10 +18,20 @@ Team project to front-end course.
 
 ## Tecnologías utilizadas
 
-
+- HTML5 / CSS3
+- JavaScript / TypeScript
+- (Framework a definir)
+- (API consumida)
 
 ## Cómo ejecutar el proyecto
 
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+```
 
 ## Estado del proyecto
 
