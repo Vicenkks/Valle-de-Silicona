@@ -18,10 +18,20 @@ Team project to front-end course.
 
 ## Tecnologías utilizadas
 
-
+- HTML5 / CSS3
+- JavaScript / TypeScript
+- (Framework a definir)
+- (API consumida)
 
 ## Cómo ejecutar el proyecto
 
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+```
 
 ## Estado del proyecto
 
