@@ -5,11 +5,12 @@ Team project to front-end course.
 
 | Nombre | Rol ágil |
 |---|---|
-| ---- | Scrum Master |
+| Rallen I. Castro | Scrum Master |
 | Vicente Huilcaman | Developer |
-| ------ | Product Owner |
-| ------- | QA/Tester |
-| ------ | Developer |
+| Javier Gutierrez | Product Owner |
+| Josefa I.  | QA/Tester |
+| Keisy D. | Developer |
+| Maria R.  | QA/Tester |
 
 ## Descripción breve
 
