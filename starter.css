@@ -24,9 +24,9 @@
 
 /* ---------- 1) Reset básico y tipografía ---------- */
 
-* {
+/* {
   box-sizing: border-box;
-}
+} */
 
 body {
   margin: 0;
@@ -108,7 +108,6 @@ li {
 }
 
 /* ---------- 3) Un borde y una etiqueta por elemento semántico ---------- */
-
 header, nav, main, section, article, aside, footer {
   position: relative;
   display: block;
