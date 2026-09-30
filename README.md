@@ -1,6 +1,7 @@
 # Valle-de-Silicona
 Team project to front-end course.
 
+
 ## Integrantes y roles (Sprint actual)
 
 | Nombre | Rol ágil |
@@ -23,6 +24,13 @@ Team project to front-end course.
 - (Framework a definir)
 - (API consumida)
 
+## Estructura del proyecto
+Valle-de-Silicona/
+    css/
+    js/
+    img/
+    pages/
+    index.html
 ## Cómo ejecutar el proyecto
 
 ```bash
