@@ -45,8 +45,8 @@ npm run dev
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 0 (Kickoff)
-- Última actualización: (fecha)
+- Sprint actual: Sprint 1
+- Última actualización: 30 de septiembre de 2026
 
 ## Tablero Kanban
 
