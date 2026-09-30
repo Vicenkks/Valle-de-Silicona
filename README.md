@@ -25,14 +25,14 @@ Team project to front-end course.
 - (API consumida)
 
 ## Estructura del proyecto
-
+```text
 Valle-de-Silicona/
 ├── css/            # Estilos del sitio (CSS)
 ├── js/             # Scripts y lógica (JavaScript)
 ├── img/            # Imágenes y recursos gráficos
 ├── pages/          # Páginas secundarias (HTML)
 └── index.html      # Página principal
-
+```
 ## Cómo ejecutar el proyecto
 
 ```bash
