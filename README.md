@@ -53,5 +53,4 @@ npm run dev
 Enlace al tablero: https://trello.com/invite/b/6a7dd26c5f91dc253e750160/ATTIc3e52326d5f21e7cf5f390e0e5718ad33A1C425B/valle-de-silicona-frontend
 
 ## Enlace de despliegue
-
-+ Todavía no está disponible
+https://vicenkks.github.io/Valle-de-Silicona/
