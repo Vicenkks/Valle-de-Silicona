@@ -5,12 +5,12 @@ Team project to front-end course.
 
 | Nombre | Rol ágil |
 |---|---|
+| Javier E. Gutierrez | Product Owner |
 | Rallen I. Castro | Scrum Master |
-| Vicente Huilcaman | Developer |
-| Javier Gutierrez | Product Owner |
-| Josefa I.  | QA/Tester |
-| Keisy D. | Developer |
-| Maria R.  | QA/Tester |
+| Vicente J. Huilcaman | Developer |
+| Keisy D. Epul| Developer |
+| Josefa I. Duarte | QA/Tester |
+| Maria R. Henríquez | QA/Tester |
 
 ## Descripción breve
 
@@ -40,7 +40,7 @@ npm run dev
 
 ## Tablero Kanban
 
-Enlace al tablero: [(Tablero)](https://trello.com/invite/b/6a7dd26c5f91dc253e750160/ATTIc3e52326d5f21e7cf5f390e0e5718ad33A1C425B/valle-de-silicona-frontend)
+Enlace al tablero: https://trello.com/invite/b/6a7dd26c5f91dc253e750160/ATTIc3e52326d5f21e7cf5f390e0e5718ad33A1C425B/valle-de-silicona-frontend
 
 ## Enlace de despliegue
 
