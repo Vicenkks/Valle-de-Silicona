@@ -1,3 +1,4 @@
+/* styles_actividades.css — Tarjetas de atractivos turísticos (pages/actividades.html): filtros + fichas + CTA a rutas */
 * {
     box-sizing: border-box;
 }
@@ -38,9 +39,18 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: bold;
     font-size: 1.5rem;
     color: #2c7a7b;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
 }
 
 .widget-clima {
@@ -116,6 +126,74 @@ body {
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 1rem;
+}
+
+.contenedor-principal h1,
+.subtitulo,
+.filtros-actividades,
+#sin-resultados {
+    grid-column: 1 / -1;
+}
+
+.subtitulo {
+    margin: 0;
+    color: #555;
+}
+
+.filtros-actividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filtro-btn {
+    border: 1px solid #2c7a7b;
+    background: #fff;
+    color: #2c7a7b;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filtro-btn.activo {
+    background: #2c7a7b;
+    color: #fff;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #e6f2f2;
+    color: #2c7a7b;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+}
+
+.detalles-actividad {
+    margin: 1rem 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.btn-ruta {
+    display: inline-block;
+    text-decoration: none;
+    background: #2c7a7b;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-ruta:hover {
+    background: #236364;
 }
 
 .barra-lateral {

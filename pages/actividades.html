@@ -1,71 +1,226 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecoruta - Actividades</title>
-    <link rel="stylesheet" href="../css/styles_actividades.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles_actividades.css" />
+  </head>
+  <body>
     <header class="header-principal">
+      <div role="Complementary" class="header-top">
+        <div role="Complementary" class="logo"><img src="../img/araucaria.png" alt="Logo araucaria EcoRutas" class="logo-img"><span>EcoRutas</span></div>
 
-        <div role="Complementary" class="header-top">
-        
-            <div role="Complementary" class="logo">EcoRutas</div>
-
-            <div role="Complementary" class="widget-clima" aria-label="Condiciones climáticas actuales">
-                <img src="https://cdn-icons-png.flaticon.com/128/2948/2948175.png" alt="Nube de lluvia" class="icono-clima" aria-hidden="true">
-                <div role="Complementary" class="detalles-clima">
-                    <strong>Lluvioso en Temuco</strong><br>
-                    <span>15°C | Humedad 80%</span>
-                </div>
-            </div>
-
+        <div
+          role="Complementary"
+          class="widget-clima"
+          aria-label="Condiciones climáticas actuales"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2948/2948175.png"
+            alt="Nube de lluvia"
+            class="icono-clima"
+            aria-hidden="true"
+          />
+          <div role="Complementary" class="detalles-clima">
+            <strong>Lluvioso en Temuco</strong><br />
+            <span>15°C | Humedad 80%</span>
+          </div>
         </div>
+      </div>
 
+      <nav aria-label="Navegación principal" class="nav-principal">
+        <ul class="nav-lista">
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="rutas.html">Rutas</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
 
-        <nav aria-label="Navegación principal" class="nav-principal">
-            <ul class="nav-lista">
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a href="ofertas.html">Ofertas</a></li>
-                <li><a href="rutas.html">Rutas</a></li>
-                <li><a href="comunidad.html">Comunidad</a></li>
-            </ul>
-            
-            <a href="#" class="profile-link" aria-label="Ir a tu perfil de usuario">
-                <img src="https://i.pinimg.com/736x/87/26/89/872689ed230670a7cf0f33310a45b76d.jpg" alt="" class="img-perfil">
-            </a>
-        </nav>
+        <a href="#" class="profile-link" aria-label="Ir a tu perfil de usuario">
+          <img
+            src="https://i.pinimg.com/736x/87/26/89/872689ed230670a7cf0f33310a45b76d.jpg"
+            alt=""
+            class="img-perfil"
+          />
+        </a>
+      </nav>
     </header>
 
     <main class="contenedor-principal">
-        <h1 class="sr-only">Actividades en la Araucanía</h1>
-        <div class="contenido-actividades">
-            <section class="tarjeta-actividad">
-                <img src="../img/Parque_Conguillio.jpg" alt="Fotografia del parque Conguillio" class="img-actividad">
-                <h2>Trekking</h2>
-                <p>Disfruta de los paisajes naturales de la Araucanía con nuestro tour de trekking por el parque conguillio</p>
-            </section>
+      <h1>Actividades en la Araucanía</h1>
+      <p class="subtitulo">
+        Explora por tipo de actividad y encuentra dónde vivirla.
+      </p>
 
-        <section class="tarjeta-actividad">
-            <img src="../img/Descenso.jpg" alt="Grupo de personas realizando descenso en rios" class="img-actividad">
-            <h2>Kayak</h2>
-            <p>Disfruta de las aguas cristalinas del Río Toltén en un emocionante descenso en ríos</p>
-        </section>
+      <nav
+        aria-label="Filtrar por tipo de actividad"
+        class="filtros-actividades"
+      >
+        <button
+          type="button"
+          class="filtro-btn activo"
+          data-filtro="todas"
+          aria-pressed="true"
+        >
+          Todas
+        </button>
+        <button
+          type="button"
+          class="filtro-btn"
+          data-filtro="trekking"
+          aria-pressed="false"
+        >
+          Trekking
+        </button>
+        <button
+          type="button"
+          class="filtro-btn"
+          data-filtro="kayak"
+          aria-pressed="false"
+        >
+          Kayak
+        </button>
+        <button
+          type="button"
+          class="filtro-btn"
+          data-filtro="termas"
+          aria-pressed="false"
+        >
+          Termas
+        </button>
+        <button
+          type="button"
+          class="filtro-btn"
+          data-filtro="gastronomia"
+          aria-pressed="false"
+        >
+          Gastronomía
+        </button>
+      </nav>
 
-        <section class="tarjeta-actividad">
-            <img src="../img/termas.jpg" alt="Imagen de aguas termales" class="img-actividad">
-            <h2>Aguas Termales</h2>
-            <p>Disfruta de las aguas termales en medio de una quebrada natural en Coñaripe</p>
-        </section>
-        </div>
+      <div class="contenido-actividades">
+        <article class="tarjeta-actividad" data-categoria="trekking">
+          <img
+            src="../img/parque-conguillio.jpg"
+            alt="Fotografia del parque Conguillio"
+            class="img-actividad"
+          />
+          <span class="etiqueta">Trekking</span>
+          <h2>Trekking Parque Conguillío</h2>
+          <p>
+            Recorrido guiado entre araucarias milenarias y lagos volcánicos en
+            el corazón del Geoparque Kütralkura.
+          </p>
+          <ul class="detalles-actividad">
+            <li>
+              <strong>Dónde:</strong> Parque Nacional Conguillío, Araucanía
+              andina
+            </li>
+            <li>
+              <strong>Nivel físico:</strong> Medio – caminata de 4 a 6 horas
+            </li>
+            <li>
+              <strong>Equipamiento recomendado:</strong> Zapatos de trekking,
+              cortaviento
+            </li>
+          </ul>
+          <a href="rutas.html#ruta-conguillio" class="btn-ruta"
+            >Ver ruta donde se realiza</a
+          >
+        </article>
 
-        <aside aria-label="Información complementaria" class="barra-lateral">
-            <article class="tarjeta-info">
-                <h3>Sobre el clima</h3>
-                <p>Terrible, mucha lluvia.</p>
-            </article>
-        </aside>
+        <article class="tarjeta-actividad" data-categoria="kayak">
+          <img
+            src="../img/descenso-rio-tolten.jpg"
+            alt="Grupo de personas realizando descenso en rios"
+            class="img-actividad"
+          />
+          <span class="etiqueta">Kayak</span>
+          <h2>Kayak Río Toltén</h2>
+          <p>
+            Descenso en aguas cristalinas del Río Toltén, ideal para iniciarse
+            en el kayak con guías locales.
+          </p>
+          <ul class="detalles-actividad">
+            <li><strong>Dónde:</strong> Río Toltén, sector Pocoyán</li>
+            <li>
+              <strong>Nivel físico:</strong> Medio-alto – se requiere saber
+              nadar
+            </li>
+            <li>
+              <strong>Equipamiento recomendado:</strong> Proveído por el
+              operador (chaleco, casco, remo)
+            </li>
+          </ul>
+          <a href="rutas.html#ruta-tolten" class="btn-ruta"
+            >Ver ruta donde se realiza</a
+          >
+        </article>
+
+        <article class="tarjeta-actividad" data-categoria="termas">
+          <img
+            src="../img/termas-conaripe.jpg"
+            alt="Imagen de aguas termales"
+            class="img-actividad"
+          />
+          <span class="etiqueta">Termas</span>
+          <h2>Aguas Termales Coñaripe</h2>
+          <p>
+            Relájate en pozones naturales en medio de una quebrada nativa en
+            Coñaripe.
+          </p>
+          <ul class="detalles-actividad">
+            <li>
+              <strong>Dónde:</strong> Termas de Coñaripe, comuna de Panguipulli
+            </li>
+            <li>
+              <strong>Nivel físico:</strong> Bajo – apto para todo público
+            </li>
+            <li>
+              <strong>Equipamiento recomendado:</strong> No requiere
+              equipamiento especial
+            </li>
+          </ul>
+          <a href="rutas.html#ruta-conaripe" class="btn-ruta"
+            >Ver emprendimiento donde se realiza</a
+          >
+        </article>
+
+        <article class="tarjeta-actividad" data-categoria="gastronomia">
+          <img
+            src="https://muniteodoro.cl/portal/wp-content/uploads/2017/02/MG_5086-660x440.jpg"
+            alt="Feria de Productos Locales Rain Mapu en Teodoro Schmidt"
+            class="img-actividad"
+          />
+          <span class="etiqueta">Gastronomía</span>
+          <h2>Feria Rain Mapu</h2>
+          <p>
+            Prueba mote con huesillo, tortillas de rescoldo y productos mapuche
+            en la feria local de Teodoro Schmidt.
+          </p>
+          <ul class="detalles-actividad">
+            <li><strong>Dónde:</strong> Feria Rain Mapu, Teodoro Schmidt</li>
+            <li><strong>Nivel físico:</strong> Bajo – paseo familiar</li>
+            <li>
+              <strong>Equipamiento recomendado:</strong> No requiere
+              equipamiento especial
+            </li>
+          </ul>
+          <a href="rutas.html#ruta-teodoro-schmidt" class="btn-ruta"
+            >Ver ruta donde se realiza</a
+          >
+        </article>
+      </div>
+
+      <aside aria-label="Información complementaria" class="barra-lateral">
+        <article class="tarjeta-info">
+          <h3>Sobre el clima</h3>
+          <p>Terrible, mucha lluvia.</p>
+        </article>
+      </aside>
+      <p id="sin-resultados" hidden>No hay actividades para este filtro.</p>
     </main>
-</body>
+    <script src="../js/main.js" defer></script>
+  </body>
 </html>
