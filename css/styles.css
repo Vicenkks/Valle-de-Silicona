@@ -39,9 +39,18 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: bold;
     font-size: 1.5rem;
     color: #2c7a7b;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
 }
 
 .widget-clima {
