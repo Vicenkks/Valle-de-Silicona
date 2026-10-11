@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRutas - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/emprendimientos.js"></script>
 </head>
 <body>
     <header class="header-principal">
@@ -64,10 +65,62 @@
                 <p>Más información o enlaces aquí.</p>
             </article>
         </aside>
+        <section class="eco-map-wrapper">
+            <div class="eco-map-header">
+                <h2>Región de La Araucanía</h2>
+                <p>Visualización de rutas principales y puntos de emprendimientos locales.</p>
+            </div>
+           
+            <div class="mapa-container">
+                <img src="img\Mapa-Araucania_Rutero ESP_0015.jpg" alt="Mapa de La Araucanía" class="mapa-imagen">
+                <div id="capa-puntos"></div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-principal">
         <p>&copy; EcoRutas 2026</p>
     </footer>
+
+
+
+<script src="emprendimientos.js"></script>
+<script>
+    window.addEventListener("load", () => {
+        const capaPuntos = document.getElementById('capa-puntos');
+
+        if (typeof listaEmprendimientos !== 'undefined') {
+            listaEmprendimientos.forEach(punto => {
+                const pin = document.createElement('a');
+                pin.className = 'punto-marcador';
+                pin.innerHTML = punto.icono;
+                pin.title = `${punto.nombre}: ${punto.descripcion}`;
+                
+                pin.href = punto.enlace;
+                pin.style.left = punto.x + '%';
+                pin.style.top = punto.y + '%';
+                capaPuntos.appendChild(pin);
+            });
+        }
+    });
+</script>
+
+ <!-- Script para obtener coordenadas al hacer clic en el mapa -->
+<!-- <script>
+    const mapaContainer = document.querySelector('.mapa-container');
+
+    if (mapaContainer) {
+        mapaContainer.addEventListener('click', (e) => {
+            const rect = mapaContainer.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            const coordenadaX = x.toFixed(1);
+            const coordenadaY = y.toFixed(1);
+            const resultado = `{ x: ${coordenadaX}, y: ${coordenadaY} }`;
+            console.log("Coordenadas copiadas:", resultado);
+            prompt("¿Copia esto para el JSON:", resultado);
+        });
+    }
+</script> -->
 </body>
 </html>
