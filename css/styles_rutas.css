@@ -1,0 +1,52 @@
+/* Estilos para la vista de ruta única */
+.contenedor-ruta-unica { 
+  max-width: 800px; 
+  margin: 2rem auto; 
+  background: #fff; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+.titulo-ruta-unica {
+  color: var(--primary-color, #2d6a4f); 
+  margin-top: 10px;
+}
+
+.detalles-extra-ruta {
+  margin: 1.5rem 0; 
+  background: #f4f6f5; 
+  padding: 1rem; 
+  border-radius: 6px;
+}
+
+.mapa-embed-container {
+  margin-top: 1.5rem;
+}
+
+.mapa-iframe {
+  border: 0; 
+  border-radius: 8px;
+}
+
+.contenedor-btn-volver {
+  margin-top: 2rem;
+}
+
+.btn-volver-actividades {
+  background: #2d6a4f; 
+  color: white; 
+  padding: 0.8rem 1.5rem; 
+  text-decoration: none; 
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.btn-volver-actividades:hover {
+  background: #1b4332;
+}
+
+.h1 {
+  color: var(--primary-color, #2d6a4f); 
+  margin-top: 10px;
+}

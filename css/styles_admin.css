@@ -1,0 +1,133 @@
+/* Estilos específicos para el panel de administración */
+.admin-container { 
+  max-width: 800px; 
+  margin: 2rem auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem; 
+}
+
+.form-admin { 
+  background: #fff; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+}
+
+.form-admin label { 
+  font-weight: bold; 
+  color: #1b4332; 
+}
+
+.form-admin input, 
+.form-admin textarea { 
+  width: 100%; 
+  padding: 0.8rem; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+.form-titulo {
+  margin-top: 0; 
+  color: #1b4332;
+}
+
+.tabla-titulo {
+  margin-top: 0; 
+  color: #1b4332;
+}
+
+.form-acciones {
+  display: flex; 
+  gap: 10px;
+}
+
+.btn-guardar { 
+  background: #2d6a4f; 
+  color: white; 
+  padding: 0.8rem; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  flex: 1;
+}
+
+.btn-guardar:hover { 
+  background: #1b4332; 
+}
+
+.btn-cancelar { 
+  background: #6c757d; 
+  color: white; 
+  padding: 0.8rem; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  display: none; 
+}
+
+.btn-exportar {
+  background: #2980b9; 
+  color: white; 
+  padding: 0.8rem; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  margin-top: 10px;
+}
+
+/* Estilos de la tabla de gestión */
+.tabla-gestion { 
+  background: #fff; 
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  overflow-x: auto; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 1rem; 
+}
+
+th, td { 
+  padding: 10px; 
+  border-bottom: 1px solid #ddd; 
+  text-align: left; 
+  font-size: 0.9rem; 
+}
+
+th { 
+  background-color: #f4f6f5; 
+  color: #1b4332; 
+}
+
+.acciones-btns { 
+  display: flex; 
+  gap: 8px; 
+}
+
+.btn-editar { 
+  background: #f39c12; 
+  color: white; 
+  border: none; 
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.btn-eliminar { 
+  background: #c0392b; 
+  color: white; 
+  border: none; 
+  padding: 5px 10px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}

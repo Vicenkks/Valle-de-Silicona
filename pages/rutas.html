@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoRutas - Ruta Específica</title>
+  <link rel="stylesheet" href="../css/styles_actividades.css" />
+  <link rel="stylesheet" href="../css/styles_rutas.css" />
+</head>
+<body>
+  <header class="header-principal">
+    <div class="logo"><span>EcoRutas</span></div>
+    <nav class="nav-principal">
+      <ul class="nav-lista">
+        <li><a href="actividades.html">Volver a Actividades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <!-- Contenedor donde aparecerá solo la ruta buscada -->
+    <div id="detalle-ruta" class="contenedor-ruta-unica">
+      <p>Cargando información de la ruta...</p>
+    </div>
+  </main>
+
+  <!-- Cargamos tu archivo centralizado de datos -->
+  <script src="../js/emprendimientos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const contenedor = document.getElementById('detalle-ruta');
+
+      const params = new URLSearchParams(window.location.search);
+      const idBuscado = params.get('id');
+
+      if (typeof listaEmprendimientos !== 'undefined' && idBuscado) {
+        const rutaEncontrada = listaEmprendimientos.find(item => item.id === idBuscado);
+
+        if (rutaEncontrada) {
+          contenedor.innerHTML = `
+            <span class="etiqueta">${rutaEncontrada.etiqueta}</span>
+            <h1 class="titulo-ruta-unica">${rutaEncontrada.titulo}</h1>
+            <p><strong>Ubicación:</strong> ${rutaEncontrada.donde}</p>
+            <p>${rutaEncontrada.descripcion}</p>
+            
+            <div class="detalles-extra-ruta">
+              <p><strong>Nivel físico:</strong> ${rutaEncontrada.nivelFisico}</p>
+              <p><strong>Equipamiento:</strong> ${rutaEncontrada.equipamiento}</p>
+            </div>
+
+            <div class="mapa-embed-container">
+              <h3>Mapa de ubicación y ruta:</h3>
+              <iframe src="${rutaEncontrada.mapaUrl}" width="100%" height="400" class="mapa-iframe" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="contenedor-btn-volver">
+              <a href="actividades.html" class="btn-volver-actividades">← Volver a Actividades</a>
+            </div>
+          `;
+        } else {
+          contenedor.innerHTML = `<h2>Ruta no encontrada</h2><p>Lo sentimos, la ruta que buscas no existe o fue removida.</p><a href="actividades.html">Volver</a>`;
+        }
+      } else {
+        contenedor.innerHTML = `<h2>Ninguna ruta seleccionada</h2><p>Por favor, selecciona una actividad desde el mapa o la lista.</p><a href="actividades.html">Ver actividades</a>`;
+      }
+    });
+  </script>
+</body>
+</html>
