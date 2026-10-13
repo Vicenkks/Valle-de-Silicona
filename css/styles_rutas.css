@@ -50,3 +50,60 @@
   color: var(--primary-color, #2d6a4f); 
   margin-top: 10px;
 }
+
+/* Sección de guías turísticos - Historia: "Como guía turístico quiero que las personas conozcan las rutas" */
+.seccion-guia {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #eef6f1;
+  border: 1px solid #cfe3d8;
+  border-left: 6px solid #2d6a4f;
+}
+
+.titulo-guia {
+  color: #1b4332;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.guia-descripcion {
+  margin: 0 0 0.75rem 0;
+  color: #444;
+}
+
+.guia-nombre {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+
+.guia-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-guia {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+}
+
+.btn-email {
+  background: #2d6a4f;
+}
+
+.btn-email:hover {
+  background: #1b4332;
+}
