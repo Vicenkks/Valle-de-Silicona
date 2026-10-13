@@ -33,10 +33,46 @@
       const params = new URLSearchParams(window.location.search);
       const idBuscado = params.get('id');
 
+      function construirSeccionGuia(ruta) {
+        // Solo mostrar si la ruta requiere/recomienda guía y tiene datos de contacto
+        if (!ruta.requiereGuia || !ruta.guia || !ruta.guia.nombre) {
+          return "";
+        }
+        const nombreGuia = ruta.guia.nombre;
+        const whatsapp = (ruta.guia.whatsapp || "").replace(/\D/g, "");
+        const email = ruta.guia.email || "";
+        const mensaje = encodeURIComponent(`Hola ${nombreGuia}, quiero hacer la ruta "${ruta.titulo}" con un guía. ¿Me das más información?`);
+        const whatsappUrl = whatsapp ? `https://wa.me/${whatsapp}?text=${mensaje}` : "";
+        const emailUrl = email ? `mailto:${email}?subject=${encodeURIComponent(`Ruta ${ruta.titulo} con guía`)}&body=${mensaje}` : "";
+
+        let botones = "";
+        if (whatsappUrl) {
+          botones += `<a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-guia btn-whatsapp">Contactar por WhatsApp</a>`;
+        }
+        if (emailUrl) {
+          botones += `<a href="${emailUrl}" class="btn-guia btn-email">Enviar correo</a>`;
+        }
+        if (!botones) {
+          return "";
+        }
+
+        return `
+            <section class="seccion-guia" aria-label="Contacto de guía turístico">
+              <h2 class="titulo-guia">Haz esta ruta con un guía</h2>
+              <p class="guia-descripcion">Esta ruta requiere o recomienda ir acompañado por seguridad y para una mejor experiencia.</p>
+              <p class="guia-nombre"><strong>${nombreGuia}</strong></p>
+              <div class="guia-botones">
+                ${botones}
+              </div>
+            </section>
+        `;
+      }
+
       if (typeof listaEmprendimientos !== 'undefined' && idBuscado) {
         const rutaEncontrada = listaEmprendimientos.find(item => item.id === idBuscado);
 
         if (rutaEncontrada) {
+          const seccionGuia = construirSeccionGuia(rutaEncontrada);
           contenedor.innerHTML = `
             <span class="etiqueta">${rutaEncontrada.etiqueta}</span>
             <h1 class="titulo-ruta-unica">${rutaEncontrada.titulo}</h1>
@@ -47,6 +83,8 @@
               <p><strong>Nivel físico:</strong> ${rutaEncontrada.nivelFisico}</p>
               <p><strong>Equipamiento:</strong> ${rutaEncontrada.equipamiento}</p>
             </div>
+
+            ${seccionGuia}
 
             <div class="mapa-embed-container">
               <h3>Mapa de ubicación y ruta:</h3>

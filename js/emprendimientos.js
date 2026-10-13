@@ -15,6 +15,7 @@ const listaEmprendimientos = [
         y: 68.0,
         icono: "📍",
         mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.902830994371!2d-73.09172126630394!3d-38.99827787536293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96154100357a72bd%3A0x30060f780f1df98d!2sRAYMAPU.%20MERCADO%20DE%20ARTESAN%C3%8DAS!5e0!3m2!1ses-419!2scl!4v1791767434494!5m2!1ses-419!2scl",
+        requiereGuia: false,
     },
     {
         id:"kayak-tolten",
@@ -30,7 +31,13 @@ const listaEmprendimientos = [
         x: 20.9,
         y: 68.9,
         icono: "🚤",
-        mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4342.010958697102!2d-73.08416261362132!3d-39.011217532123254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96153f7cd6764f87%3A0x3bb050e1d0f8784e!2sBalsadero%20Pocoy%C3%A1n!5e0!3m2!1ses-419!2scl!4v1791768398462!5m2!1ses-419!2scl"
+        mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4342.010958697102!2d-73.08416261362132!3d-39.011217532123254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96153f7cd6764f87%3A0x3bb050e1d0f8784e!2sBalsadero%20Pocoy%C3%A1n!5e0!3m2!1ses-419!2scl!4v1791768398462!5m2!1ses-419!2scl",
+        requiereGuia: true,
+        guia: {
+            nombre: "Agencia Toltén Aventura",
+            whatsapp: "56912345678",
+            email: "contacto@toltenaventura.cl"
+        }
     },
     {
         id:"pesca-chinooks",
@@ -47,6 +54,12 @@ const listaEmprendimientos = [
         y: 67.0,
         icono: "🖈",
         mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.1381196607426!2d-73.08496994679402!3d-39.012162673803964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96153ffd821d7009%3A0xbeead75c70186cf5!2sMirador%20Pe%C3%B1ehue%2C%20Teodoro%20Schmidt!5e0!3m2!1ses-419!2scl!4v1791768611654!5m2!1ses-419!2scl",
+        requiereGuia: true,
+        guia: {
+            nombre: "Guía Local Pocoyán – Juan Marín",
+            whatsapp: "56987654321",
+            email: "juan.marin.pesca@gmail.com"
+        }
     },
     {
         id: "Trekking-Parque-Coguillio",
@@ -62,7 +75,13 @@ const listaEmprendimientos = [
         x: 69.7,
         y: 52.9,
         icono: "🌲",
-        mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99794.30106584007!2d-71.91611113123349!3d-38.58970494069341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966ca9c1e87dd4a5%3A0xbc7b5c8e3eaa6bf5!2sParque%20Nacional%20Conguill%C3%ADo!5e0!3m2!1ses-419!2scl!4v1791769377630!5m2!1ses-419!2scl"
+        mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99794.30106584007!2d-71.91611113123349!3d-38.58970494069341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966ca9c1e87dd4a5%3A0xbc7b5c8e3eaa6bf5!2sParque%20Nacional%20Conguill%C3%ADo!5e0!3m2!1ses-419!2scl!4v1791769377630!5m2!1ses-419!2scl",
+        requiereGuia: true,
+        guia: {
+            nombre: "Agencia Conguillío Adventure",
+            whatsapp: "56998765432",
+            email: "reservas@conguillioadventure.cl"
+        }
     },
     {
         id: "Centro-Villarrica",
@@ -79,6 +98,7 @@ const listaEmprendimientos = [
         y: 78.4,
         icono: "🌋",
         mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5002.02805658652!2d-72.22949818295713!3d-39.28011582596715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614623c8e00fe6f%3A0xe7812f04b9706fcc!2sVillarrica%2C%20Araucan%C3%ADa!5e0!3m2!1ses-419!2scl!4v1791769105768!5m2!1ses-419!2scl",
+        requiereGuia: false,
     },
     {
         id: "Termas-Coñaripe",
@@ -95,5 +115,6 @@ const listaEmprendimientos = [
         y: 90.9,
         icono: "♨",
         mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900802.0948128216!2d-72.04669875861887!3d-38.72550137206662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9613f595f20e970d%3A0xc1d3931ce549b276!2sTermas%20Quilalelfu!5e0!3m2!1ses-419!2scl!4v1791768895442!5m2!1ses-419!2scl",
+        requiereGuia: false,
     }
 ];
