@@ -1,62 +1,132 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoRutas - Ruta Específica</title>
-  <link rel="stylesheet" href="../css/styles_actividades.css" />
-  <link rel="stylesheet" href="../css/styles_rutas.css" />
-</head>
-<body>
-  <header class="header-principal">
-    <div class="logo"><span>EcoRutas</span></div>
-    <nav class="nav-principal">
-      <ul class="nav-lista">
-        <li><a href="actividades.html">Volver a Actividades</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoRutas - Ruta Específica</title>
+    <link rel="stylesheet" href="../css/styles_actividades.css" />
+    <link rel="stylesheet" href="../css/styles_rutas.css" />
+  </head>
+  <body>
+    <header class="header-principal">
+      <div class="logo"><span>EcoRutas</span></div>
+      <nav class="nav-principal">
+        <ul class="nav-lista">
+          <li><a href="actividades.html">Volver a Actividades</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="contenedor-principal">
-    <!-- Contenedor donde aparecerá solo la ruta buscada -->
-    <div id="detalle-ruta" class="contenedor-ruta-unica">
-      <p>Cargando información de la ruta...</p>
-    </div>
-  </main>
+    <main class="contenedor-principal">
+      <!-- Contenedor donde aparecerá solo la ruta buscada -->
+      <div id="detalle-ruta" class="contenedor-ruta-unica">
+        <p>Cargando información de la ruta...</p>
+      </div>
+    </main>
 
-  <!-- Cargamos tu archivo centralizado de datos -->
-  <script src="../js/emprendimientos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const contenedor = document.getElementById('detalle-ruta');
+    <footer class="footer-principal">
+      <section class="alianzas" aria-label="Alianzas y respaldo institucional">
+        <h2 class="alianzas-titulo">
+          Información verificada con fuentes oficiales
+        </h2>
+        <p class="alianzas-subtitulo">
+          Las fichas de EcoRutas se elaboran a partir de datos públicos de estas
+          instituciones. Verifica la normativa vigente directamente en sus
+          sitios oficiales.
+        </p>
+        <ul class="alianzas-lista">
+          <li>
+            <a
+              href="https://www.conaf.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="CONAF – Corporación Nacional Forestal (se abre en una pestaña nueva)"
+              >CONAF</a
+            >
+            <span class="alianza-desc">Parques nacionales</span>
+          </li>
+          <li>
+            <a
+              href="https://www.sernatur.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Sernatur – Servicio Nacional de Turismo (se abre en una pestaña nueva)"
+              >Sernatur</a
+            >
+            <span class="alianza-desc">Turismo oficial</span>
+          </li>
+          <li>
+            <a
+              href="https://muniteodoro.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Municipalidad de Teodoro Schmidt (se abre en una pestaña nueva)"
+              >Municipalidad Teodoro Schmidt</a
+            >
+            <span class="alianza-desc">Información local</span>
+          </li>
+          <li>
+            <a
+              href="https://www.munivillarrica.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Municipalidad de Villarrica (se abre en una pestaña nueva)"
+              >Municipalidad Villarrica</a
+            >
+            <span class="alianza-desc">Información comunal</span>
+          </li>
+        </ul>
+      </section>
+      <p class="footer-copy">
+        &copy; EcoRutas 2026 – Acerca de: proyecto informativo sin fines
+        comerciales. Las normativas siempre deben verificarse en los sitios
+        oficiales enlazados en cada ficha.
+      </p>
+    </footer>
 
-      const params = new URLSearchParams(window.location.search);
-      const idBuscado = params.get('id');
+    <!-- Cargamos tu archivo centralizado de datos -->
+    <script src="../js/emprendimientos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contenedor = document.getElementById("detalle-ruta");
 
-      function construirSeccionGuia(ruta) {
-        // Solo mostrar si la ruta requiere/recomienda guía y tiene datos de contacto
-        if (!ruta.requiereGuia || !ruta.guia || !ruta.guia.nombre) {
-          return "";
-        }
-        const nombreGuia = ruta.guia.nombre;
-        const whatsapp = (ruta.guia.whatsapp || "").replace(/\D/g, "");
-        const email = ruta.guia.email || "";
-        const mensaje = encodeURIComponent(`Hola ${nombreGuia}, quiero hacer la ruta "${ruta.titulo}" con un guía. ¿Me das más información?`);
-        const whatsappUrl = whatsapp ? `https://wa.me/${whatsapp}?text=${mensaje}` : "";
-        const emailUrl = email ? `mailto:${email}?subject=${encodeURIComponent(`Ruta ${ruta.titulo} con guía`)}&body=${mensaje}` : "";
+        const params = new URLSearchParams(window.location.search);
+        const idBuscado = params.get("id");
 
-        let botones = "";
-        if (whatsappUrl) {
-          botones += `<a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-guia btn-whatsapp">Contactar por WhatsApp</a>`;
-        }
-        if (emailUrl) {
-          botones += `<a href="${emailUrl}" class="btn-guia btn-email">Enviar correo</a>`;
-        }
-        if (!botones) {
-          return "";
-        }
+        function construirSeccionGuia(ruta) {
+          // Solo mostrar si la ruta requiere/recomienda guía y tiene datos de contacto
+          if (!ruta.requiereGuia || !ruta.guia || !ruta.guia.nombre) {
+            return "";
+          }
+          const nombreGuia = ruta.guia.nombre;
+          const whatsapp = (ruta.guia.whatsapp || "").replace(/\D/g, "");
+          const email = ruta.guia.email || "";
+          const mensaje = encodeURIComponent(
+            `Hola ${nombreGuia}, quiero hacer la ruta "${ruta.titulo}" con un guía. ¿Me das más información?`,
+          );
+          const whatsappUrl = whatsapp
+            ? `https://wa.me/${whatsapp}?text=${mensaje}`
+            : "";
+          const emailUrl = email
+            ? `mailto:${email}?subject=${encodeURIComponent(`Ruta ${ruta.titulo} con guía`)}&body=${mensaje}`
+            : "";
 
-        return `
+          let botones = "";
+          if (whatsappUrl) {
+            botones += `<a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-guia btn-whatsapp">Contactar por WhatsApp</a>`;
+          }
+          if (emailUrl) {
+            botones += `<a href="${emailUrl}" class="btn-guia btn-email">Enviar correo</a>`;
+          }
+          if (!botones) {
+            return "";
+          }
+
+          return `
             <section class="seccion-guia" aria-label="Contacto de guía turístico">
               <h2 class="titulo-guia">Haz esta ruta con un guía</h2>
               <p class="guia-descripcion">Esta ruta requiere o recomienda ir acompañado por seguridad y para una mejor experiencia.</p>
@@ -66,14 +136,63 @@
               </div>
             </section>
         `;
-      }
+        }
 
-      if (typeof listaEmprendimientos !== 'undefined' && idBuscado) {
-        const rutaEncontrada = listaEmprendimientos.find(item => item.id === idBuscado);
+        // Historia: "Como turista quiero ver de dónde proviene la información de cada ficha"
+        // Muestra fuente, vigencia y enlaces oficiales (siempre en pestaña nueva).
+        function formatearFechaActualizacion(iso) {
+          if (!iso) return "";
+          const fecha = new Date(iso + "T12:00:00");
+          if (isNaN(fecha)) return iso;
+          return fecha.toLocaleDateString("es-CL", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          });
+        }
 
-        if (rutaEncontrada) {
-          const seccionGuia = construirSeccionGuia(rutaEncontrada);
-          contenedor.innerHTML = `
+        function construirSeccionVerificacion(ruta) {
+          const fuente =
+            ruta.fuente ||
+            "Sernatur / CONAF / Municipalidades (fuentes oficiales)";
+          const actualizadoISO = ruta.actualizado || "";
+          const actualizadoTexto = formatearFechaActualizacion(actualizadoISO);
+          const enlaces = Array.isArray(ruta.enlacesOficiales)
+            ? ruta.enlacesOficiales
+            : [];
+
+          const enlacesHtml =
+            enlaces.length > 0
+              ? `<ul class="enlaces-oficiales-lista">${enlaces.map((e) => `<li><a href="${e.url}" target="_blank" rel="noopener">${e.etiqueta} <span aria-hidden="true">↗</span><span class="sr-only">(se abre en una pestaña nueva)</span></a></li>`).join("")}</ul>`
+              : `<ul class="enlaces-oficiales-lista">
+               <li><a href="https://www.conaf.cl/" target="_blank" rel="noopener">CONAF – Normativa de parques <span aria-hidden="true">↗</span><span class="sr-only">(se abre en una pestaña nueva)</span></a></li>
+               <li><a href="https://www.sernatur.cl/" target="_blank" rel="noopener">Sernatur – Información turística oficial <span aria-hidden="true">↗</span><span class="sr-only">(se abre en una pestaña nueva)</span></a></li>
+             </ul>`;
+
+          return `
+            <section class="seccion-verificacion" aria-label="Fuente y vigencia de la información">
+              <h2 class="titulo-verificacion">Fuente y vigencia de esta ficha</h2>
+              <p class="fuente-info"><strong>Fuente de la información:</strong> ${fuente}</p>
+              ${actualizadoTexto ? `<p class="fecha-actualizacion"><small>Última actualización de la información: <time datetime="${actualizadoISO}">${actualizadoTexto}</time></small></p>` : `<p class="fecha-actualizacion"><small>Última actualización de la información: septiembre de 2026</small></p>`}
+              <div class="enlaces-oficiales">
+                <h3 class="enlaces-oficiales-titulo">Normativa y sitios oficiales</h3>
+                <p class="enlaces-oficiales-ayuda">Verifica horarios, tarifas y reglas vigentes directamente en las fuentes oficiales:</p>
+                ${enlacesHtml}
+              </div>
+            </section>
+        `;
+        }
+
+        if (typeof listaEmprendimientos !== "undefined" && idBuscado) {
+          const rutaEncontrada = listaEmprendimientos.find(
+            (item) => item.id === idBuscado,
+          );
+
+          if (rutaEncontrada) {
+            const seccionGuia = construirSeccionGuia(rutaEncontrada);
+            const seccionVerificacion =
+              construirSeccionVerificacion(rutaEncontrada);
+            contenedor.innerHTML = `
             <span class="etiqueta">${rutaEncontrada.etiqueta}</span>
             <h1 class="titulo-ruta-unica">${rutaEncontrada.titulo}</h1>
             <p><strong>Ubicación:</strong> ${rutaEncontrada.donde}</p>
@@ -86,6 +205,8 @@
 
             ${seccionGuia}
 
+            ${seccionVerificacion}
+
             <div class="mapa-embed-container">
               <h3>Mapa de ubicación y ruta:</h3>
               <iframe src="${rutaEncontrada.mapaUrl}" width="100%" height="400" class="mapa-iframe" allowfullscreen="" loading="lazy"></iframe>
@@ -95,13 +216,13 @@
               <a href="actividades.html" class="btn-volver-actividades">← Volver a Actividades</a>
             </div>
           `;
+          } else {
+            contenedor.innerHTML = `<h2>Ruta no encontrada</h2><p>Lo sentimos, la ruta que buscas no existe o fue removida.</p><a href="actividades.html">Volver</a>`;
+          }
         } else {
-          contenedor.innerHTML = `<h2>Ruta no encontrada</h2><p>Lo sentimos, la ruta que buscas no existe o fue removida.</p><a href="actividades.html">Volver</a>`;
+          contenedor.innerHTML = `<h2>Ninguna ruta seleccionada</h2><p>Por favor, selecciona una actividad desde el mapa o la lista.</p><a href="actividades.html">Ver actividades</a>`;
         }
-      } else {
-        contenedor.innerHTML = `<h2>Ninguna ruta seleccionada</h2><p>Por favor, selecciona una actividad desde el mapa o la lista.</p><a href="actividades.html">Ver actividades</a>`;
-      }
-    });
-  </script>
-</body>
+      });
+    </script>
+  </body>
 </html>

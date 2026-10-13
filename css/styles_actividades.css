@@ -209,6 +209,91 @@ body {
     color: white;
 }
 
+/* Historia: turista verifica legitimidad – alianzas/respaldo + vigencia */
+.alianzas {
+    max-width: 1000px;
+    margin: 0 auto 1.5rem auto;
+    padding: 1.5rem;
+    background: #3d3d3d;
+    border-radius: 8px;
+}
+
+.alianzas-titulo {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.alianzas-subtitulo {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.alianzas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.alianzas-lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    min-width: 140px;
+}
+
+.alianza-logo {
+    font-weight: 800;
+    text-decoration: none;
+    color: #1b4332;
+    border: 2px solid #2d6a4f;
+    border-radius: 6px;
+    padding: 0.25rem 0.75rem;
+    background: #eef6f1;
+}
+
+.alianza-logo:hover,
+.alianza-logo:focus {
+    background: #2d6a4f;
+    color: #fff;
+}
+
+.alianza-desc {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ficha-fuente {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0.5rem 0 0 0;
+}
+
+.fecha-actualizacion {
+    margin: 0.25rem 0 1rem 0;
+    color: #666;
+}
+
+.fecha-actualizacion small {
+    font-size: 0.8rem;
+}
+
 /* --- Media Queries --- */
 
 @media (min-width: 768px) {
