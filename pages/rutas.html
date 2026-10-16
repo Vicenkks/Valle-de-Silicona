@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoRutas - Ruta Específica</title>
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styles_actividades.css" />
     <link rel="stylesheet" href="../css/styles_rutas.css" />
   </head>
@@ -19,6 +20,14 @@
 
     <main class="contenedor-principal">
       <!-- Contenedor donde aparecerá solo la ruta buscada -->
+      <!-- Migas de Pan (Breadcrumbs) para Rutas -->
+      <nav aria-label="Migas de pan" class="migas-pan">
+          <ol class="lista-migas">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="actividades.html">Actividades</a></li>
+              <li aria-current="page">Detalle de Ruta</li>
+          </ol>
+      </nav>
       <div id="detalle-ruta" class="contenedor-ruta-unica">
         <p>Cargando información de la ruta...</p>
       </div>

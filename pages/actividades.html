@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecoruta - Actividades</title>
+    <!-- Estilos de la página de actividades -->
     <link rel="stylesheet" href="../css/styles_actividades.css" />
   </head>
 
   <body>
+    <!-- Encabezado Principal -->
     <header class="header-principal">
       <div role="Complementary" class="header-top">
         <div role="Complementary" class="logo">
@@ -16,15 +18,16 @@
             alt="Logo araucaria EcoRutas"
             class="logo-img"
           />
-          <span
-            ><a
+          <span>
+            <a
               href="../index.html"
               style="text-decoration: none; color: inherit"
               >EcoRutas</a
-            ></span
-          >
+            >
+          </span>
         </div>
 
+        <!-- Widget del Clima -->
         <div
           role="Complementary"
           class="widget-clima"
@@ -43,6 +46,7 @@
         </div>
       </div>
 
+      <!-- Navegación Principal -->
       <nav aria-label="Navegación principal" class="nav-principal">
         <ul class="nav-lista">
           <li><a href="actividades.html">Actividades</a></li>
@@ -59,12 +63,23 @@
         </a>
       </nav>
     </header>
+
+    <!-- Contenido Principal -->
     <main class="contenedor-principal">
+      <!-- Migas de Pan (Breadcrumbs) para navegación fácil -->
+      <nav aria-label="Migas de pan" class="migas-pan">
+        <ol class="lista-migas">
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Actividades</li>
+        </ol>
+      </nav>
+
       <h1>Actividades en la Araucanía</h1>
       <p class="subtitulo">
         Explora por tipo de actividad y encuentra dónde vivirla.
       </p>
 
+      <!-- Filtros de búsqueda por categoría -->
       <nav
         aria-label="Filtrar por tipo de actividad"
         class="filtros-actividades"
@@ -89,6 +104,7 @@
       <!-- Contenedor donde se generarán las tarjetas automáticamente -->
       <div class="contenido-actividades" id="contenedor-actividades"></div>
 
+      <!-- Mensaje por si el filtro no arroja resultados -->
       <p id="sin-resultados" hidden>No hay actividades para este filtro.</p>
     </main>
 
@@ -125,7 +141,7 @@
                     </ul>
                     <p class="ficha-fuente"><strong>Fuente:</strong> ${fuente}</p>
                     ${fecha ? `<p class="fecha-actualizacion"><small>Última actualización de la información: <time datetime="${item.actualizado}">${fecha}</time></small></p>` : ""}
-                    <a href="rutas.html?id=${item.id}"class="btn-ruta">Ver ruta donde se realiza</a>
+                    <a href="rutas.html?id=${item.id}" class="btn-ruta">Ver ruta donde se realiza</a>
                 `;
 
             contenedor.appendChild(article);
@@ -134,6 +150,8 @@
       });
     </script>
     <script src="../js/main.js" defer></script>
+
+    <!-- Pie de Página Principal con Alianzas Institucionales -->
     <footer class="footer-principal">
       <section class="alianzas" aria-label="Alianzas y respaldo institucional">
         <h2 class="alianzas-titulo">

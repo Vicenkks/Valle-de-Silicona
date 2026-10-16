@@ -311,3 +311,72 @@ body {
 .punto-marcador:hover {
     transform: translate(-50%, -50%) scale(1.3);
 }
+
+/* --- Estilos para Migas de Pan (Breadcrumbs) --- */
+.migas-pan {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+.lista-migas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.lista-migas li+li::before {
+    content: "/";
+    padding-right: 8px;
+    color: #718096;
+}
+
+.lista-migas a {
+    color: #2c7a7b;
+    text-decoration: none;
+}
+
+.lista-migas a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos para Ventana Emergente (Modal) --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.contenido-modal {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4a5568;
+}

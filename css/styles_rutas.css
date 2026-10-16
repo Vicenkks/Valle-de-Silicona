@@ -167,3 +167,39 @@
   color: #1b4332;
   text-decoration: underline;
 }
+
+/* --- Estilos para las Migas de Pan (Breadcrumbs) --- */
+.migas-pan {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.lista-migas {
+    display: flex;             /* Pone los elementos en fila horizontal */
+    align-items: center;
+    list-style: none;          /* Quita los números de la lista (1., 2.) */
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.lista-migas li+li::before {
+    content: "/";              /* Agrega la barra diagonal entre items */
+    padding-right: 8px;
+    color: #718096;
+}
+
+.lista-migas a {
+    color: #2c7a7b;            /* Color verde acorde a tu tema */
+    text-decoration: none;
+}
+
+.lista-migas a:hover {
+    text-decoration: underline;
+}
+
+.lista-migas li[aria-current="page"] {
+    color: #4a5568;
+    font-weight: 500;
+}
