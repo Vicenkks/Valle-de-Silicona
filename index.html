@@ -45,16 +45,16 @@
         <h1 class="sr-only">Actividades en la Araucanía</h1>
         <div class="contenido-actividades">
             <section class="tarjeta-actividad">
-                <img src="../img/feria-rain-mapu.jpg" alt="Fotografia de la Feria de Productos Locales Rain Mapu en Teodoro Schmidt" class="img-actividad">
+                <img src="img/feria-rain-mapu.jpg" alt="Fotografia de la Feria de Productos Locales Rain Mapu en Teodoro Schmidt" class="img-actividad">
                 <h2>Visita Teodoro Schmidt</h2>
                 <p>Cómprate un mote con huesillo en la feria Rain Mapu...</p>
             </section>
 
-        <section class="tarjeta-actividad">
-            <img src="../img/pesca-salmones.jpg" alt="Dos pescadores sosteniendo un Chinook cada uno en el Río Toltén" class="img-actividad">
-            <h2>Ven al Río Toltén a pescar Chinooks</h2>
-            <p>¡Concurso de pesca en la balsa de Pocoyán!</p>
-        </section>
+            <section class="tarjeta-actividad">
+                <img src="img/pesca-salmones.jpg" alt="Dos pescadores sosteniendo un Chinook cada uno en el Río Toltén" class="img-actividad">
+                <h2>Ven al Río Toltén a pescar Chinooks</h2>
+                <p>¡Concurso de pesca en la balsa de Pocoyán!</p>
+            </section>
         </div>
 
         <aside aria-label="Información complementaria" class="barra-lateral">
@@ -74,7 +74,7 @@
             </div>
            
             <div class="mapa-container">
-                <img src="img\Mapa-Araucania_Rutero ESP_0015.jpg" alt="Mapa de La Araucanía" class="mapa-imagen">
+                <img src="img/Mapa-Araucania_Rutero ESP_0015.jpg" alt="Mapa de La Araucanía" class="mapa-imagen">
                 <div id="capa-puntos"></div>
             </div>
         </section>
@@ -109,33 +109,42 @@
         </section>
         <p class="footer-copy">&copy; EcoRutas 2026</p>
     </footer>
+    
+    <!-- Ventana Emergente / Modal (Navegación Contextual) -->
+    <div id="modal-detalle" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
+        <div class="contenido-modal">
+            <button class="boton-cerrar" aria-label="Cerrar ventana emergente">&times;</button>
+            <h2 id="titulo-modal">Detalle de la Actividad</h2>
+            <img src="img/feria-rain-mapu.jpg" alt="Feria Rain Mapu" class="img-actividad">
+            <p>Información detallada del emprendimiento o ruta seleccionada sin necesidad de recargar ni salir de la página principal.</p>
+        </div>
+    </div>
 
+    <script>
+        window.addEventListener("load", () => {
+            const capaPuntos = document.getElementById('capa-puntos');
 
-<script>
-    window.addEventListener("load", () => {
-        const capaPuntos = document.getElementById('capa-puntos');
+            if (typeof listaEmprendimientos !== 'undefined') {
+                listaEmprendimientos.forEach(punto => {
+                    // Creamos un enlace (<a>) para que el pin sea clickeable
+                    const pin = document.createElement('a');
+                    pin.className = 'punto-marcador';
+                    pin.innerHTML = punto.icono;
+                    pin.title = `${punto.titulo}: ${punto.descripcion}`;
+                    
+                    // AQUÍ ESTÁ LA MAGIA DE LA RUTA:
+                    // Redirige a actividades.html y salta automáticamente a la tarjeta usando su ID (#id)
+                    pin.href = `pages/actividades.html?id=${punto.id}`;
 
-        if (typeof listaEmprendimientos !== 'undefined') {
-            listaEmprendimientos.forEach(punto => {
-                // Creamos un enlace (<a>) para que el pin sea clickeable
-                const pin = document.createElement('a');
-                pin.className = 'punto-marcador';
-                pin.innerHTML = punto.icono;
-                pin.title = `${punto.titulo}: ${punto.descripcion}`;
-                
-                // AQUÍ ESTÁ LA MAGIA DE LA RUTA:
-                // Redirige a actividades.html y salta automáticamente a la tarjeta usando su ID (#id)
-                pin.href = `pages/actividades.html?id=${punto.id}`;
+                    // Posicionamiento en porcentaje sobre el mapa
+                    pin.style.left = punto.x + '%';
+                    pin.style.top = punto.y + '%';
 
-                // Posicionamiento en porcentaje sobre el mapa
-                pin.style.left = punto.x + '%';
-                pin.style.top = punto.y + '%';
-
-                capaPuntos.appendChild(pin);
-            });
-        }
-    });
-</script>
+                    capaPuntos.appendChild(pin);
+                });
+            }
+        });
+    </script>
 
  <!-- Script para obtener coordenadas al hacer clic en el mapa -->
 <!-- <script>
