@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoRutas - Comunidad</title>
+    <link rel="stylesheet" href="../css/styles_actividades.css" />
+    <link rel="stylesheet" href="../css/styles_comunidad.css" />
+  </head>
+
+  <body>
+    <header class="header-principal">
+      <div class="header-top">
+        <div class="logo">
+          <img
+            src="../img/araucaria.png"
+            alt="Logo araucaria EcoRutas"
+            class="logo-img"
+          />
+          <span><a href="../index.html">EcoRutas</a></span>
+        </div>
+
+        <div class="widget-clima">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2948/2948175.png"
+            alt=""
+            class="icono-clima"
+          />
+          <div class="detalles-clima">
+            <strong>Lluvioso en Temuco</strong><br />
+            <span>15°C | Humedad 80%</span>
+          </div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal" class="nav-principal">
+        <ul class="nav-lista">
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="comunidad.html" aria-current="page">Comunidad</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contenedor-principal">
+      <h1>Emprendimientos locales de la Araucanía</h1>
+      <p class="subtitulo">
+        Descubre los emprendimientos de la zona y apoya a quienes viven aquí.
+      </p>
+
+      <div
+        class="filtros-actividades"
+        role="group"
+        aria-label="Ordenar emprendimientos"
+      >
+        <button
+          type="button"
+          class="filtro-btn orden-btn activo"
+          data-orden="todos"
+          aria-pressed="true"
+        >
+          Todos
+        </button>
+        <button
+          type="button"
+          class="filtro-btn orden-btn"
+          data-orden="novedades"
+          aria-pressed="false"
+        >
+          Novedades
+        </button>
+      </div>
+
+      <!-- Avisa a lectores de pantalla cuando cambia el orden -->
+      <p id="estado-orden" class="sr-only" aria-live="polite"></p>
+
+      <!-- Aquí comunidad.js genera las tarjetas -->
+      <div class="lista-emprendimientos" id="lista-emprendimientos"></div>
+    </main>
+
+    <footer class="footer-principal">
+      <section class="alianzas" aria-label="Alianzas y respaldo institucional">
+        <h2 class="alianzas-titulo">
+          Información verificada con fuentes oficiales
+        </h2>
+        <p class="alianzas-subtitulo">
+          Las fichas de EcoRutas se elaboran a partir de datos públicos de estas
+          instituciones.
+        </p>
+        <ul class="alianzas-lista">
+          <li>
+            <a
+              href="https://www.conaf.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="CONAF – Corporación Nacional Forestal (se abre en una pestaña nueva)"
+              >CONAF</a
+            >
+            <span class="alianza-desc">Parques nacionales</span>
+          </li>
+          <li>
+            <a
+              href="https://www.sernatur.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Sernatur – Servicio Nacional de Turismo (se abre en una pestaña nueva)"
+              >Sernatur</a
+            >
+            <span class="alianza-desc">Turismo oficial</span>
+          </li>
+          <li>
+            <a
+              href="https://muniteodoro.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Municipalidad de Teodoro Schmidt (se abre en una pestaña nueva)"
+              >Municipalidad Teodoro Schmidt</a
+            >
+            <span class="alianza-desc">Información local</span>
+          </li>
+          <li>
+            <a
+              href="https://www.munivillarrica.cl/"
+              target="_blank"
+              rel="noopener"
+              class="alianza-logo"
+              aria-label="Municipalidad de Villarrica (se abre en una pestaña nueva)"
+              >Municipalidad Villarrica</a
+            >
+            <span class="alianza-desc">Información comunal</span>
+          </li>
+        </ul>
+      </section>
+      <p class="footer-copy">&copy; EcoRutas 2026</p>
+    </footer>
+
+    <script src="../js/emprendimientos.js"></script>
+    <script src="../js/comunidad.js"></script>
+  </body>
+</html>
