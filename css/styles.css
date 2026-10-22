@@ -1,313 +1,270 @@
-/* styles.css — Página principal (index.html): layout general, header, nav, home */
+/* Estilos simples. Primero se diseña para celular. */
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f9f9f9;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+  background-color: #f5f5f5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #075c46;
+}
+
+a:focus,
+.boton:focus {
+  outline: 3px solid #9c3d00;
+  outline-offset: 3px;
+}
+
+/* Enlace útil para las personas que navegan con teclado. */
+.saltar-contenido {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  padding: 0.75rem;
+  color: white;
+  background-color: #075c46;
+}
+
+.saltar-contenido:focus {
+  left: 1rem;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
-/* --- Estilos mobile --- */
-
+/* Encabezado y navegación */
 .header-principal {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
 }
 
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+.encabezado-contenido,
+.contenedor,
+.pie-contenido {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #2c7a7b;
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.marca a {
+  color: #075c46;
+  text-decoration: none;
 }
 
 .logo-img {
-    height: 32px;
-    width: auto;
-    object-fit: contain;
-}
-
-.widget-clima {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.icono-clima {
-    height: 50px;
-    width: 50px;
-}
-
-.detalles-clima {
-    line-height: 1.2;
-    font-size: 0.9em;
-}
-
-.nav-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-lista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
 }
 
 .nav-lista a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  font-weight: bold;
 }
 
-.img-perfil {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
+.nav-lista a[aria-current="page"] {
+  color: #075c46;
+  text-decoration: none;
+  border-bottom: 3px solid #075c46;
 }
 
-.contenedor-principal {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 3fr;
-    gap: 1.5rem;
+.clima {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
 }
 
-.contenido-actividades {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.icono-clima {
+  width: 35px;
+  height: 35px;
 }
 
-.tarjeta-actividad, .tarjeta-info {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+/* Contenido */
+.contenedor {
+  padding: 2rem 0;
 }
 
-.img-actividad {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 1rem;
+h1,
+h2,
+h3 {
+  color: #075c46;
 }
 
-.barra-lateral {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+h1 {
+  font-size: 2rem;
 }
 
-.footer-principal {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #333;
-    color: white;
+.introduccion {
+  max-width: 650px;
+  font-size: 1.1rem;
 }
 
-/* Historia: turista verifica legitimidad – alianzas/respaldo + acerca de */
-.alianzas {
-    max-width: 1000px;
-    margin: 0 auto 1.5rem auto;
-    padding: 1.5rem;
-    background: #3d3d3d;
-    border-radius: 8px;
+.hero,
+.rejilla {
+  display: grid;
+  gap: 1rem;
 }
 
-.alianzas-titulo {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
-    color: #fff;
+.hero-imagen,
+.tarjeta-imagen {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-.alianzas-subtitulo {
-    margin: 0 0 1rem 0;
-    font-size: 0.9rem;
-    color: #ddd;
+.hero-imagen {
+  height: 250px;
 }
 
-.alianzas-lista {
+.tarjeta {
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.tarjeta-imagen {
+  height: 200px;
+}
+
+.tarjeta-contenido,
+.oferta,
+.ficha {
+  padding: 1rem;
+}
+
+.tarjeta h2,
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  color: #075c46;
+  background-color: #dcefe7;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  color: white;
+  background-color: #075c46;
+  border: 2px solid #075c46;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background-color: #043b2d;
+}
+
+.boton-secundario {
+  color: #075c46;
+  background-color: white;
+}
+
+.oferta,
+.ficha {
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.ficha {
+  max-width: 750px;
+}
+
+.datos,
+.aviso {
+  padding: 1rem;
+  background-color: #dcefe7;
+  border-left: 5px solid #075c46;
+}
+
+.seccion {
+  margin-top: 2rem;
+}
+
+/* Pie de página */
+.pie-principal {
+  padding: 2rem 0;
+  color: white;
+  background-color: #12372c;
+}
+
+.pie-principal h2,
+.pie-principal a {
+  color: white;
+}
+
+.enlaces-pie {
+  padding: 0;
+  list-style: none;
+}
+
+/* En pantallas más grandes se muestran más columnas. */
+@media (min-width: 768px) {
+  .encabezado-contenido {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.alianzas-lista li {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.25rem;
-    background: #fff;
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    min-width: 140px;
-}
+  }
 
-.alianza-logo {
-    font-weight: 800;
-    text-decoration: none;
-    color: #1b4332;
-    border: 2px solid #2d6a4f;
-    border-radius: 6px;
-    padding: 0.25rem 0.75rem;
-    background: #eef6f1;
-}
+  .nav-lista,
+  .clima {
+    margin-top: 0;
+  }
 
-.alianza-logo:hover,
-.alianza-logo:focus {
-    background: #2d6a4f;
-    color: #fff;
-}
-
-.alianza-desc {
-    font-size: 0.8rem;
-    color: #555;
-}
-
-.acerca-de {
-    max-width: 800px;
-    margin: 0 auto 1rem auto;
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-.acerca-titulo {
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-    color: #fff;
-}
-
-.footer-copy {
-    font-size: 0.85rem;
-    color: #ccc;
-}
-
-/* --- Media Queries --- */
-
-@media (min-width: 768px) {
-    .header-principal {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-    }
-
-    .nav-principal {
-        flex-direction: row;
-    }
-
-    .contenedor-principal {
-        grid-template-columns: 2fr 1fr;
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
-/* --- Estilos del Mapa --- */
-:root {
-    --primary-color: #1b4332;
-    --accent-eco: #2d6a4f;
-    --route-red: #c0392b;
-}
-
-.eco-map-wrapper {
-    grid-column: 1 / -1;
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
+  .hero {
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-}
+  }
 
-.eco-map-header {
-    text-align: center;
-    margin-bottom: 15px;
-}
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.eco-map-header h2 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.mapa-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    border: 3px solid #d8e8dc;
-}
-
-.mapa-imagen {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-#capa-puntos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-   
-.punto-marcador {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: transform 0.2s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-    z-index: 20;
-    text-decoration: none; 
-}
-
-.punto-marcador:hover {
-    transform: translate(-50%, -50%) scale(1.3);
+  .rejilla-tres {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

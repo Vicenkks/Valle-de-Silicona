@@ -1,6 +1,5 @@
 # Valle-de-Silicona
-Team project to front-end course.
-
+Proyecto grupal para Front-End.
 
 ## Integrantes y roles (Sprint actual)
 
@@ -14,15 +13,14 @@ Team project to front-end course.
 | Maria R. Henríquez | QA/Tester |
 
 ## Descripción breve
-
-> Breve descripción del proyecto EcoRuta Temuco desarrollado por el equipo.
+EcoRuta es un sitio web en el que puedes planificar tus salidas hacia el sur de chile, con rutas guiadas y economicas.
 
 ## Tecnologías utilizadas
 
-- HTML5 / CSS3
-- JavaScript / TypeScript
-- (Framework a definir)
-- (API consumida)
+- HTML5 semántico
+- CSS3 con enfoque mobile-first
+- Diseño responsivo y accesible (criterios base de WCAG AA)
+
 
 ## Estructura del proyecto
 ```text
@@ -36,17 +34,13 @@ Valle-de-Silicona/
 ## Cómo ejecutar el proyecto
 
 ```bash
-# Instalar dependencias
-npm install
-
-# Ejecutar en modo desarrollo
-npm run dev
+# Abrir index.html en un navegador
 ```
 
 ## Estado del proyecto
 
 - Sprint actual: Sprint 1
-- Última actualización: 30 de septiembre de 2026
+- Última actualización: 22 de octubre de 2026
 
 ## Tablero Kanban
 
@@ -55,5 +49,3 @@ Enlace al tablero: https://trello.com/invite/b/6a7dd26c5f91dc253e750160/ATTIc3e5
 ## Enlace de despliegue
 https://vicenkks.github.io/Valle-de-Silicona/
 
-## Docs de referencia
-https://araucania.cl/images/descargas/MAPA%20RUTERO%20ESPAÑOL%20ARAUCANÍA.pdf # Mapa de la región
