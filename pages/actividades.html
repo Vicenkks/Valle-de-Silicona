@@ -1,200 +1,85 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecoruta - Actividades</title>
-    <link rel="stylesheet" href="../css/styles_actividades.css" />
-  </head>
 
-  <body>
-    <header class="header-principal">
-      <div role="Complementary" class="header-top">
-        <div role="Complementary" class="logo">
-          <img
-            src="../img/araucaria.png"
-            alt="Logo araucaria EcoRutas"
-            class="logo-img"
-          />
-          <span
-            ><a
-              href="../index.html"
-              style="text-decoration: none; color: inherit"
-              >EcoRutas</a
-            ></span
-          >
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Actividades al aire libre y culturales en La Araucanía.">
+  <title>Actividades | EcoRutas</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
 
-        <div
-          role="Complementary"
-          class="widget-clima"
-          aria-label="Condiciones climáticas actuales"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/2948/2948175.png"
-            alt="Nube de lluvia"
-            class="icono-clima"
-            aria-hidden="true"
-          />
-          <div role="Complementary" class="detalles-clima">
-            <strong>Lluvioso en Temuco</strong><br />
-            <span>15°C | Humedad 80%</span>
-          </div>
-        </div>
+<body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+  <header class="header-principal">
+    <div class="encabezado-contenido">
+      <div class="marca"><img class="logo-img" src="../img/araucaria.png" alt=""><a href="../index.html">EcoRutas</a>
       </div>
-
-      <nav aria-label="Navegación principal" class="nav-principal">
+      <nav class="nav-principal" aria-label="Navegación principal">
         <ul class="nav-lista">
-          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="actividades.html" aria-current="page">Actividades</a></li>
           <li><a href="ofertas.html">Ofertas</a></li>
           <li><a href="comunidad.html">Comunidad</a></li>
         </ul>
-
-        <a href="#" class="profile-link" aria-label="Ir a tu perfil de usuario">
-          <img
-            src="https://i.pinimg.com/736x/87/26/89/872689ed230670a7cf0f33310a45b76d.jpg"
-            alt=""
-            class="img-perfil"
-          />
-        </a>
       </nav>
-    </header>
-    <main class="contenedor-principal">
-      <h1>Actividades en la Araucanía</h1>
-      <p class="subtitulo">
-        Explora por tipo de actividad y encuentra dónde vivirla.
-      </p>
+      <p class="clima"><img class="icono-clima" src="../img/nube.png" alt="">Lluvioso en Temuco: 15 °C</p>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor">
+    <h1>Actividades en La Araucanía</h1>
+    <p class="introduccion">Elige un panorama y revisa sus recomendaciones antes de viajar.</p>
+    <section class="rejilla rejilla-tres" aria-label="Listado de actividades">
+      <article class="tarjeta"><img class="tarjeta-imagen" src="../img/parque-conguillio.jpg"
+          alt="Araucarias y paisaje volcánico en el Parque Nacional Conguillío">
+        <div class="tarjeta-contenido"><span class="etiqueta">Trekking</span>
+          <h2>Parque Nacional Conguillío</h2>
+          <p>Senderos entre araucarias, lagunas y vistas volcánicas.</p>
+          <ul class="lista-detalles">
+            <li>Ubicación: Melipeuco.</li>
+            <li>Duración sugerida: medio día.</li>
+            <li>Consulta el estado de los senderos.</li>
+          </ul><a class="boton" href="rutas.html">Ver ficha de ruta</a>
+        </div>
+      </article>
+      <article class="tarjeta" id="termas"><img class="tarjeta-imagen" src="../img/termas-conaripe.jpg"
+          alt="Termas rodeadas de vegetación en Coñaripe">
+        <div class="tarjeta-contenido"><span class="etiqueta">Bienestar</span>
+          <h2>Termas de Coñaripe</h2>
+          <p>Relájate en un entorno natural junto a lagos y bosques.</p>
+          <ul class="lista-detalles">
+            <li>Ubicación: Coñaripe.</li>
+            <li>Actividad de baja exigencia física.</li>
+            <li>Confirma horarios y reservas.</li>
+          </ul><a href="ofertas.html">Revisar ofertas disponibles</a>
+        </div>
+      </article>
+      <article class="tarjeta"><img class="tarjeta-imagen" src="../img/pesca-salmones.jpg"
+          alt="Dos personas pescando en el río Toltén">
+        <div class="tarjeta-contenido"><span class="etiqueta">Pesca recreativa</span>
+          <h2>Río Toltén</h2>
+          <p>Una jornada al aire libre para quienes cuentan con el equipo adecuado.</p>
+          <ul class="lista-detalles">
+            <li>Ubicación: sector Pocoyán.</li>
+            <li>Revisa la normativa de pesca vigente.</li>
+            <li>Usa chaleco salvavidas cerca del agua.</li>
+          </ul><a href="rutas.html">Ver recomendaciones</a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="pie-principal">
+    <div class="pie-contenido">
+      <h2>Fuentes oficiales</h2>
+      <ul class="enlaces-pie">
+        <li><a href="https://www.conaf.cl/" target="_blank" rel="noopener">CONAF <span class="sr-only">(se abre en una
+              pestaña nueva)</span></a></li>
+        <li><a href="https://www.sernatur.cl/" target="_blank" rel="noopener">Sernatur <span class="sr-only">(se abre en
+              una pestaña nueva)</span></a></li>
+      </ul>
+      <p class="copy">© 2026 EcoRutas</p>
+    </div>
+  </footer>
+</body>
 
-      <nav
-        aria-label="Filtrar por tipo de actividad"
-        class="filtros-actividades"
-      >
-        <button type="button" class="filtro-btn activo" data-filtro="todas">
-          Todas
-        </button>
-        <button type="button" class="filtro-btn" data-filtro="trekking">
-          Trekking
-        </button>
-        <button type="button" class="filtro-btn" data-filtro="kayak">
-          Kayak
-        </button>
-        <button type="button" class="filtro-btn" data-filtro="termas">
-          Termas
-        </button>
-        <button type="button" class="filtro-btn" data-filtro="gastronomia">
-          Gastronomía
-        </button>
-      </nav>
-
-      <!-- Contenedor donde se generarán las tarjetas automáticamente -->
-      <div class="contenido-actividades" id="contenedor-actividades"></div>
-
-      <p id="sin-resultados" hidden>No hay actividades para este filtro.</p>
-    </main>
-
-    <!-- Cargas el archivo de datos y el script que genera las tarjetas -->
-    <script src="../js/emprendimientos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const contenedor = document.getElementById("contenedor-actividades");
-
-        if (typeof listaEmprendimientos !== "undefined") {
-          contenedor.innerHTML = "";
-
-          listaEmprendimientos.forEach((item) => {
-            const article = document.createElement("article");
-            article.className = "tarjeta-actividad";
-            article.setAttribute("data-categoria", item.categoria);
-            article.id = item.id;
-            const fecha = item.actualizado
-              ? new Date(item.actualizado + "T12:00:00").toLocaleDateString(
-                  "es-CL",
-                  { day: "numeric", month: "long", year: "numeric" },
-                )
-              : "";
-            const fuente = item.fuente || "Sernatur / CONAF / Municipalidades";
-            article.innerHTML = `
-                    <img src="${item.imagen}" alt="Fotografía de ${item.titulo}" class="img-actividad" />
-                    <span class="etiqueta">${item.etiqueta}</span>
-                    <h2>${item.titulo}</h2>
-                    <p>${item.descripcion}</p>
-                    <ul class="detalles-actividad">
-                        <li><strong>Dónde:</strong> ${item.donde}</li>
-                        <li><strong>Nivel físico:</strong> ${item.nivelFisico}</li>
-                        <li><strong>Equipamiento recomendado:</strong> ${item.equipamiento}</li>
-                    </ul>
-                    <p class="ficha-fuente"><strong>Fuente:</strong> ${fuente}</p>
-                    ${fecha ? `<p class="fecha-actualizacion"><small>Última actualización de la información: <time datetime="${item.actualizado}">${fecha}</time></small></p>` : ""}
-                    <a href="rutas.html?id=${item.id}"class="btn-ruta">Ver ruta donde se realiza</a>
-                `;
-
-            contenedor.appendChild(article);
-          });
-        }
-      });
-    </script>
-    <script src="../js/main.js" defer></script>
-    <footer class="footer-principal">
-      <section class="alianzas" aria-label="Alianzas y respaldo institucional">
-        <h2 class="alianzas-titulo">
-          Información verificada con fuentes oficiales
-        </h2>
-        <p class="alianzas-subtitulo">
-          Las fichas de EcoRutas se elaboran a partir de datos públicos de estas
-          instituciones.
-        </p>
-        <ul class="alianzas-lista">
-          <li>
-            <a
-              href="https://www.conaf.cl/"
-              target="_blank"
-              rel="noopener"
-              class="alianza-logo"
-              aria-label="CONAF – Corporación Nacional Forestal (se abre en una pestaña nueva)"
-              >CONAF</a
-            >
-            <span class="alianza-desc">Parques nacionales</span>
-          </li>
-          <li>
-            <a
-              href="https://www.sernatur.cl/"
-              target="_blank"
-              rel="noopener"
-              class="alianza-logo"
-              aria-label="Sernatur – Servicio Nacional de Turismo (se abre en una pestaña nueva)"
-              >Sernatur</a
-            >
-            <span class="alianza-desc">Turismo oficial</span>
-          </li>
-          <li>
-            <a
-              href="https://muniteodoro.cl/"
-              target="_blank"
-              rel="noopener"
-              class="alianza-logo"
-              aria-label="Municipalidad de Teodoro Schmidt (se abre en una pestaña nueva)"
-              >Municipalidad Teodoro Schmidt</a
-            >
-            <span class="alianza-desc">Información local</span>
-          </li>
-          <li>
-            <a
-              href="https://www.munivillarrica.cl/"
-              target="_blank"
-              rel="noopener"
-              class="alianza-logo"
-              aria-label="Municipalidad de Villarrica (se abre en una pestaña nueva)"
-              >Municipalidad Villarrica</a
-            >
-            <span class="alianza-desc">Información comunal</span>
-          </li>
-        </ul>
-      </section>
-      <p class="footer-copy">
-        &copy; EcoRutas 2026 – Cada ficha indica su fuente y última
-        actualización. La normativa debe verificarse en los sitios oficiales (se
-        abren en una pestaña nueva).
-      </p>
-    </footer>
-  </body>
 </html>

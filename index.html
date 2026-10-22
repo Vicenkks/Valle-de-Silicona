@@ -1,158 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRutas - Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/emprendimientos.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rutas, actividades y emprendimientos sustentables de La Araucanía.">
+  <title>EcoRutas | Turismo sustentable en La Araucanía</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <header class="header-principal">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+  <header class="header-principal">
+    <div class="encabezado-contenido">
+      <div class="marca"><img class="logo-img" src="img/araucaria.png" alt=""><a href="index.html"
+          aria-current="page">EcoRutas</a></div>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-lista">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="pages/actividades.html">Actividades</a></li>
+          <li><a href="pages/ofertas.html">Ofertas</a></li>
+          <li><a href="pages/comunidad.html">Comunidad</a></li>
+        </ul>
+      </nav>
+      <p class="clima"><img class="icono-clima" src="img/nube.png" alt="">Lluvioso en Temuco: 15 °C</p>
+    </div>
+  </header>
 
-        <div role="Complementary" class="header-top">
-        
-            <div role="Complementary" class="logo"><img src="img/araucaria.png" alt="Logo araucaria EcoRutas" class="logo-img">
-                <span><a href="index.html" style="text-decoration: none; color: inherit;">EcoRutas</a></span>
-            </div>
+  <main id="contenido" class="contenedor">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div>
+        <h1 id="titulo-principal">Conoce La Araucanía de forma responsable</h1>
+        <p class="introduccion">Encuentra actividades, rutas y emprendimientos locales para planificar una visita
+          conectada con el territorio.</p>
+        <a class="boton" href="pages/actividades.html">Explorar actividades</a>
+      </div>
+      <img class="hero-imagen" src="img/parque-conguillio.jpg" alt="Paisaje del Parque Nacional Conguillío">
+    </section>
 
-            <div role="Complementary" class="widget-clima" aria-label="Condiciones climáticas actuales">
-                <img src="https://cdn-icons-png.flaticon.com/128/2948/2948175.png" alt="Nube de lluvia" class="icono-clima" aria-hidden="true">
-                <div role="Complementary" class="detalles-clima">
-                    <strong>Lluvioso en Temuco</strong><br>
-                    <span>15°C | Humedad 80%</span>
-                </div>
-            </div>
+    <section class="seccion" aria-labelledby="destacados">
+      <h2 id="destacados">Ideas para tu próxima salida</h2>
+      <div class="rejilla rejilla-tres">
+        <article class="tarjeta">
+          <img class="tarjeta-imagen" src="img/feria-rain-mapu.jpg" alt="Puesto de la feria local Rain Mapu">
+          <div class="tarjeta-contenido">
+            <h3>Feria Rain Mapu</h3>
+            <p>Sabores y productos locales en Teodoro Schmidt.</p><a href="pages/comunidad.html">Conocer
+              emprendimientos</a>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta-imagen" src="img/termas-conaripe.jpg" alt="Entorno natural de las termas de Coñaripe">
+          <div class="tarjeta-contenido">
+            <h3>Termas de Coñaripe</h3>
+            <p>Una alternativa para descansar en la cordillera.</p><a href="pages/actividades.html#termas">Ver
+              actividad</a>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta-imagen" src="img/descenso-rio-tolten.jpg" alt="Personas navegando por el río Toltén">
+          <div class="tarjeta-contenido">
+            <h3>Río Toltén</h3>
+            <p>Panoramas al aire libre con preparación y cuidado.</p><a href="pages/rutas.html">Ver ficha de ruta</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        </div>
+    <aside class="aviso seccion" aria-labelledby="viaje-responsable">
+      <h2 id="viaje-responsable">Antes de salir</h2>
+      <p>Revisa el clima, los horarios y las recomendaciones de seguridad. Respeta los senderos, la fauna y las
+        indicaciones de cada lugar.</p>
+    </aside>
+  </main>
 
-
-        <nav aria-label="Navegación principal" class="nav-principal">
-            <ul class="nav-lista">
-                <li><a href="pages/actividades.html">Actividades</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Comunidad</a></li>
-                <li><a href="pages/admin.html" style="color: #c0392b; font-weight: bold;">Panel Admin</a></li>
-            </ul>
-            
-            <a href="#" class="profile-link" aria-label="Ir a tu perfil de usuario">
-                <img src="https://i.pinimg.com/736x/87/26/89/872689ed230670a7cf0f33310a45b76d.jpg" alt="" class="img-perfil">
-            </a>
-        </nav>
-    </header>
-
-    <main class="contenedor-principal">
-        <h1 class="sr-only">Actividades en la Araucanía</h1>
-        <div class="contenido-actividades">
-            <section class="tarjeta-actividad">
-                <img src="../img/feria-rain-mapu.jpg" alt="Fotografia de la Feria de Productos Locales Rain Mapu en Teodoro Schmidt" class="img-actividad">
-                <h2>Visita Teodoro Schmidt</h2>
-                <p>Cómprate un mote con huesillo en la feria Rain Mapu...</p>
-            </section>
-
-        <section class="tarjeta-actividad">
-            <img src="../img/pesca-salmones.jpg" alt="Dos pescadores sosteniendo un Chinook cada uno en el Río Toltén" class="img-actividad">
-            <h2>Ven al Río Toltén a pescar Chinooks</h2>
-            <p>¡Concurso de pesca en la balsa de Pocoyán!</p>
-        </section>
-        </div>
-
-        <aside aria-label="Información complementaria" class="barra-lateral">
-            <article class="tarjeta-info">
-                <h3>Sobre el clima</h3>
-                <p>Terrible, mucha lluvia.</p>
-            </article>
-            <article class="tarjeta-info">
-                <h3>Artículo sobre actividades</h3>
-                <p>Más información o enlaces aquí.</p>
-            </article>
-        </aside>
-        <section class="eco-map-wrapper">
-            <div class="eco-map-header">
-                <h2>Región de La Araucanía</h2>
-                <p>Visualización de rutas principales y puntos de emprendimientos locales.</p>
-            </div>
-           
-            <div class="mapa-container">
-                <img src="img\Mapa-Araucania_Rutero ESP_0015.jpg" alt="Mapa de La Araucanía" class="mapa-imagen">
-                <div id="capa-puntos"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-principal">
-        <section class="alianzas" aria-label="Alianzas y respaldo institucional">
-            <h2 class="alianzas-titulo">Información verificada con fuentes oficiales</h2>
-            <p class="alianzas-subtitulo">Las fichas de EcoRutas se elaboran a partir de datos públicos de estas instituciones. Verifica la normativa vigente directamente en sus sitios oficiales.</p>
-            <ul class="alianzas-lista">
-                <li>
-                    <a href="https://www.conaf.cl/" target="_blank" rel="noopener" class="alianza-logo" aria-label="CONAF – Corporación Nacional Forestal (se abre en una pestaña nueva)">CONAF</a>
-                    <span class="alianza-desc">Parques nacionales</span>
-                </li>
-                <li>
-                    <a href="https://www.sernatur.cl/" target="_blank" rel="noopener" class="alianza-logo" aria-label="Sernatur – Servicio Nacional de Turismo (se abre en una pestaña nueva)">Sernatur</a>
-                    <span class="alianza-desc">Turismo oficial</span>
-                </li>
-                <li>
-                    <a href="https://www.teodoroschmidt.cl/" target="_blank" rel="noopener" class="alianza-logo" aria-label="Municipalidad de Teodoro Schmidt (se abre en una pestaña nueva)">Municipalidad Teodoro Schmidt</a>
-                    <span class="alianza-desc">Información local</span>
-                </li>
-                <li>
-                    <a href="https://www.munivillarrica.cl/" target="_blank" rel="noopener" class="alianza-logo" aria-label="Municipalidad de Villarrica (se abre en una pestaña nueva)">Municipalidad Villarrica</a>
-                    <span class="alianza-desc">Información comunal</span>
-                </li>
-            </ul>
-        </section>
-        <section class="acerca-de" aria-label="Acerca de EcoRutas">
-            <h2 class="acerca-titulo">Acerca de</h2>
-            <p>EcoRutas es un proyecto informativo sin fines comerciales. Cada ficha indica su <strong>fuente</strong> y su <strong>última actualización de la información</strong> para que puedas verificar su legitimidad. La normativa de parques y actividades siempre debe confirmarse en los sitios oficiales enlazados en cada ruta (se abren en una pestaña nueva).</p>
-        </section>
-        <p class="footer-copy">&copy; EcoRutas 2026</p>
-    </footer>
-
-
-<script>
-    window.addEventListener("load", () => {
-        const capaPuntos = document.getElementById('capa-puntos');
-
-        if (typeof listaEmprendimientos !== 'undefined') {
-            listaEmprendimientos.forEach(punto => {
-                // Creamos un enlace (<a>) para que el pin sea clickeable
-                const pin = document.createElement('a');
-                pin.className = 'punto-marcador';
-                pin.innerHTML = punto.icono;
-                pin.title = `${punto.titulo}: ${punto.descripcion}`;
-                
-                // AQUÍ ESTÁ LA MAGIA DE LA RUTA:
-                // Redirige a actividades.html y salta automáticamente a la tarjeta usando su ID (#id)
-                pin.href = `pages/actividades.html?id=${punto.id}`;
-
-                // Posicionamiento en porcentaje sobre el mapa
-                pin.style.left = punto.x + '%';
-                pin.style.top = punto.y + '%';
-
-                capaPuntos.appendChild(pin);
-            });
-        }
-    });
-</script>
-
- <!-- Script para obtener coordenadas al hacer clic en el mapa -->
-<!-- <script>
-    const mapaContainer = document.querySelector('.mapa-container');
-
-    if (mapaContainer) {
-        mapaContainer.addEventListener('click', (e) => {
-            const rect = mapaContainer.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            const coordenadaX = x.toFixed(1);
-            const coordenadaY = y.toFixed(1);
-            const resultado = `{ x: ${coordenadaX}, y: ${coordenadaY} }`;
-            console.log("Coordenadas copiadas:", resultado);
-            prompt("¿Copia esto para el JSON:", resultado);
-        });
-    }
-</script> -->
+  <footer class="pie-principal">
+    <div class="pie-contenido">
+      <h2>EcoRutas</h2>
+      <p>Información para descubrir La Araucanía con respeto por sus comunidades y naturaleza.</p>
+      <ul class="enlaces-pie">
+        <li><a href="https://www.conaf.cl/" target="_blank" rel="noopener">CONAF <span class="sr-only">(se abre en una
+              pestaña nueva)</span></a></li>
+        <li><a href="https://www.sernatur.cl/" target="_blank" rel="noopener">Sernatur <span class="sr-only">(se abre en
+              una pestaña nueva)</span></a></li>
+      </ul>
+      <p class="copy">© 2026 EcoRutas</p>
+    </div>
+  </footer>
 </body>
+
 </html>
