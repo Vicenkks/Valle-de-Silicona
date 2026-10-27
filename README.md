@@ -5,12 +5,12 @@ Proyecto grupal para Front-End.
 
 | Nombre | Rol ágil |
 |---|---|
-| Javier E. Gutierrez | Product Owner |
-| Rallen I. Castro | Scrum Master |
+| Javier E. Gutierrez | QA/Tester |
+| Rallen I. Castro | Developer |
 | Vicente J. Huilcaman | Developer |
-| Keisy D. Epul| Developer |
-| Josefa I. Duarte | QA/Tester |
-| Maria R. Henríquez | QA/Tester |
+| Keisy D. Epul| QA/Tester |
+| Josefa I. Duarte | Product Owner |
+| Maria R. Henríquez | Scrum Master |
 
 ## Descripción breve
 EcoRuta es un sitio web en el que puedes planificar tus salidas hacia el sur de chile, con rutas guiadas y economicas.
@@ -39,8 +39,8 @@ Valle-de-Silicona/
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 1
-- Última actualización: 22 de octubre de 2026
+- Sprint actual: Sprint 2
+- Última actualización: 27 de octubre de 2026
 
 ## Tablero Kanban
 
