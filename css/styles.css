@@ -93,6 +93,7 @@ a:focus,
 
 .nav-lista a {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .nav-lista a[aria-current="page"] {
