@@ -7,6 +7,14 @@
   <meta name="description" content="Ficha de ruta de EcoRutas.">
   <title>Ruta Parque Conguillío | EcoRutas</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/clima.css">
+  <script src="../js/config.js" defer></script>
+  <script src="../js/cielo.js" defer></script>
+  <script src="../js/aviso.js" defer></script>
+  <script src="../js/clima.js" defer></script>
+  <script src="../js/clima-tarjeta.js" defer></script>
+  <script src="../js/tarjetas.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -38,6 +46,14 @@
         <p><strong>Exigencia:</strong> media; elige un sendero acorde a tu experiencia.</p>
         <p><strong>Qué llevar:</strong> agua, abrigo, calzado adecuado y protección solar.</p>
       </div>
+      <section class="seccion clima" aria-labelledby="titulo-clima">
+        <h2 id="titulo-clima">Clima en la ruta</h2>
+        <p id="estado" aria-live="polite">Sin datos aún.</p>
+        <p>Temperatura: <strong id="temperatura">--</strong></p>
+        <p>Viento: <strong id="viento">--</strong></p>
+        <p>Cielo: <strong id="cielo">--</strong></p>
+        <p id="aviso-clima" hidden></p>
+      </section>
       <section class="seccion" aria-labelledby="seguridad">
         <h2 id="seguridad">Recomendaciones de seguridad</h2>
         <ul class="lista-detalles">
