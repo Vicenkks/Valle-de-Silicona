@@ -20,4 +20,4 @@ async function mostrarClima() {
   } catch (error) {
     console.error(error);
     estado.textContent = "No pudimos cargar el clima.";
-}
+}}
