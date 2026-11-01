@@ -1,26 +1,16 @@
-// elementos del html pendientes
-// -----------
-// -----------
-// -----------
-// -----------
+function mostrarAviso(clima, destino = aviso) {
+    if (clima.temperature_2m < 8) {
+        destino.textContent = "Hace frío: lleva abrigo";
+    } else if (clima.wind_speed_10m > 40) {
+        destino.textContent = "Viento fuerte: evita los miradores";
 
-function mostrarAviso(constante_pendiente) {
-//  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m&timezone=auto`;
+    } else {
+        destino.textContent = "Buen momento para salir";
+        destino.style.backgroundColor = "#dcf8d7";
+        destino.style.border = "#cbf5c6";
+        destino.style.color = "#163112"
+    }
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.current.temperature_2m < 8) {
-                // Hace frío: lleva abrigo»
-            }
-            else if (data.current.wind_speed_10m > 40) {
-                // Viento fuerte: evita los miradores
-            }
-            else {
-                // Buen momento para salir
-            }
-        })
-        .catch(error => {
-            console.error("Error al obtener el clima:", error);
-        });
+
+    destino.hidden = false;
 }
