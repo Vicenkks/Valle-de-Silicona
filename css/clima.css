@@ -1,0 +1,44 @@
+.seccion.clima {
+  background-color: #f4f8f4;
+  border: 1px solid #d0e1d4;
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+.seccion.clima h2 {
+  font-size: 0.95rem;
+  color: #1b4d3e;
+  margin: 0;
+  font-weight: 600;
+}
+.seccion.clima p {
+  margin: 0;
+}
+.seccion.clima strong {
+  color: #2d6a4f;
+}
+.seccion.clima p#estado {
+  color: #555;
+  font-style: italic;
+}
+.seccion.clima #aviso-clima:not([hidden]) {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
