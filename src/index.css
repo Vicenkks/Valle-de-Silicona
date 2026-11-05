@@ -1,0 +1,336 @@
+/* EcoRuta Temuco · estilos del sitio
+   Es el mismo archivo en las dos versiones:
+   semana9/estilos.css y app/src/index.css.
+   En React se importa una sola vez, en main.jsx. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  color: #1e2a22;
+  background: #ffffff;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #f9a826;
+  outline-offset: 2px;
+}
+
+/* Texto solo para lectores de pantalla */
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 34px;
+  border-bottom: 1px solid #e3e8e3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 800;
+  color: #1f5e3b;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu a {
+  color: #33443a;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+.menu a.activo {
+  color: #1f7a4a;
+  border-bottom: 2px solid #1f7a4a;
+}
+
+/* ---------- Banner y buscador ---------- */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 34px;
+  color: #ffffff;
+  background: linear-gradient(100deg, #1f5e3b, #2f8a57 60%, #5aa66f);
+}
+
+.banner h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.banner p {
+  margin-top: 4px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.buscador {
+  display: flex;
+  gap: 8px;
+}
+
+.buscador input {
+  width: 300px;
+  max-width: 60vw;
+  height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.buscador button {
+  height: 40px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #f9a826;
+  color: #1e2761;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Contenido ---------- */
+main {
+  padding-bottom: 32px;
+}
+
+.lista {
+  padding: 24px 34px 0;
+}
+
+.lista h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.fila {
+  display: flex;
+  gap: 16px;
+}
+
+/* ---------- Tarjeta de ruta ---------- */
+.tarjeta {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #e1e6e1;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  height: 112px;
+  object-fit: cover;
+}
+
+.cuerpo {
+  padding: 12px 14px 14px;
+}
+
+.cuerpo h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 10px;
+  font-size: 14px;
+  color: #556655;
+}
+
+.chip {
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chip.baja {
+  background: #e3f3e8;
+  color: #1f7a4a;
+}
+
+.chip.media {
+  background: #fff1d6;
+  color: #8a5a00;
+}
+
+.chip.alta {
+  background: #fde7e1;
+  color: #b2401f;
+}
+
+.sello {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2b5b84;
+}
+
+.boton {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1.5px solid #1f7a4a;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f7a4a;
+  text-decoration: none;
+}
+
+/* ---------- Tarjeta de emprendimiento ---------- */
+.emprendimiento {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  border: 1px solid #e1e6e1;
+  border-radius: 10px;
+}
+
+.icono {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f3d9b1;
+}
+
+.emprendimiento:nth-child(2) .icono {
+  background: #d8e8c8;
+}
+
+.emprendimiento:nth-child(3) .icono {
+  background: #d6dcf0;
+}
+
+.emprendimiento h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.emprendimiento p {
+  font-size: 12px;
+  color: #667766;
+}
+
+/* ---------- Clima (solo en la versión HTML de la semana 9) ---------- */
+.clima {
+  max-width: 420px;
+  margin: 30px 34px 0;
+  padding: 14px 16px;
+  border: 1px solid #d7e6f3;
+  border-radius: 12px;
+  background: #eef5fb;
+  color: #1e3a5a;
+}
+
+.clima h2 {
+  font-size: 15px;
+}
+
+.clima .temperatura {
+  margin: 4px 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.clima .detalle {
+  font-size: 13px;
+}
+
+.clima .aviso {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f7a4a;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 34px;
+  background: #1f2b25;
+  color: #c9d6cc;
+  font-size: 13px;
+}
+
+.pie a {
+  text-decoration: none;
+}
+
+/* ---------- Pantallas angostas ---------- */
+@media (max-width: 800px) {
+  .encabezado,
+  .fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .encabezado {
+    align-items: flex-start;
+  }
+
+  .banner,
+  .lista,
+  .encabezado,
+  .pie {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .clima {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
