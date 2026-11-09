@@ -7,27 +7,27 @@ import Footer from './componentes/footer.jsx'
 import Nav from './componentes/nav.jsx'
 import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
 import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
-import TarjetaRuta from './componentes/tarjeta-ruta.jsx'
+import ListaRutas from './componentes/lista-rutas.jsx'
 
 export default function App() {
-  return (
-    <div className="app-container">
-      {/* Barra de navegación */}
-      <Nav />
+    return (
+        <div className="app-container">
+            {/* Barra de navegación */}
+            <Nav />
 
-      {/* Aviso importante o banner principal */}
-      <Aviso />
-      <BannerPrincipal />
+            {/* Aviso importante o banner principal */}
+            <Aviso />
+            <BannerPrincipal />
 
-      {/* Contenido principal o tarjetas */}
-      <main>
-        <TarjetaEmprendimiento />
-        <TarjetaOfertas />
-        <TarjetaRuta />
-      </main>
+            {/* Contenido principal o tarjetas */}
+            <main>
+                <TarjetaEmprendimiento />
+                <TarjetaOfertas />
+                <ListaRutas />
+            </main>
 
-      {/* Pie de página */}
-      <Footer />
-    </div>
-  )
+            {/* Pie de página */}
+            <Footer />
+        </div>
+    )
 }
