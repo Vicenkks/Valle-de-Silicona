@@ -1,36 +1,34 @@
-// ENCARGO D · datos de las rutas
-// Cada ruta tiene un id numérico (para la key) y los mismos nombres
-// que las props de TarjetaRuta. Las imágenes se importan aquí mismo.
-import nielol from "../assets/nielol.svg";
-import captren from "../assets/captren.svg";
-import sierraNevada from "../assets/sierra-nevada.svg";
+// src/datos/rutas.js
 
 export const rutas = [
-  {
-    id: 1,
-    nombre: "Cerro Ñielol",
-    imagen: nielol,
-    alt: "Sendero del Cerro Ñielol",
-    distanciaKm: 4,
-    dificultad: "baja",
-    accesible: true,
-  },
-  {
-    id: 2,
-    nombre: "Laguna Captrén",
-    imagen: captren,
-    alt: "Laguna Captrén rodeada de cerros",
-    distanciaKm: 2,
-    dificultad: "baja",
-    accesible: false,
-  },
-  {
-    id: 3,
-    nombre: "Sierra Nevada",
-    imagen: sierraNevada,
-    alt: "Cumbre nevada de la Sierra Nevada",
-    distanciaKm: 7,
-    dificultad: "alta",
-    accesible: false,
-  },
+    {
+        id: 1,
+        nombre: "Feria Rain Mapu",
+        distanciaKm: 2,
+        dificultad: "baja",
+        accesible: true,
+        descripcion: "Sabores y productos locales en Teodoro Schmidt.",
+        enlaceTexto: "Conocer emprendimientos",
+        enlaceUrl: "#"
+    },
+    {
+        id: 2,
+        nombre: "Ofertas Populares",
+        distanciaKm: 8,
+        dificultad: "media",
+        accesible: false,
+        descripcion: "Revisa las ultimas ofertas del momento.",
+        enlaceTexto: "Ver ofertas",
+        enlaceUrl: "#"
+    },
+    {
+        id: 3,
+        nombre: "Río Toltén",
+        distanciaKm: 5,
+        dificultad: "baja",
+        accesible: true,
+        descripcion: "Panoramas al aire libre con preparación y cuidado.",
+        enlaceTexto: "Ver ficha de ruta",
+        enlaceUrl: "#"
+    }
 ];
