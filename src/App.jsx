@@ -5,25 +5,34 @@ import Aviso from './componentes/aviso.jsx'
 import BannerPrincipal from './componentes/banner-principal.jsx'
 import Footer from './componentes/footer.jsx'
 import Nav from './componentes/nav.jsx'
-import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
-import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
 import ListaRutas from './componentes/lista-rutas.jsx'
+// Pendientes: estos archivos todavía están vacíos en main y, si se importan,
+// React no carga la página ("does not provide an export named 'default'").
+// Cada responsable descomenta su import y su etiqueta al fusionar su componente.
+// import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
+// import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
 
 export default function App() {
     return (
         <div className="app-container">
             {/* Barra de navegación */}
-            <Nav />
+            <Nav
+                enlaces={['Inicio', 'Actividades', 'Ofertas', 'Comunidad']}
+                paginaActual="Inicio"
+            />
 
-            {/* Aviso importante o banner principal */}
-            <Aviso />
-            <BannerPrincipal />
+            {/* Contenido principal: banner, tarjetas y aviso */}
+            <main id="contenido" className="contenedor">
+                <BannerPrincipal
+                    titulo="Conoce La Araucanía de forma responsable"
+                    subtitulo="Encuentra actividades, rutas y emprendimientos locales para planificar una visita conectada con el territorio."
+                />
 
-            {/* Contenido principal o tarjetas */}
-            <main>
-                <TarjetaEmprendimiento />
-                <TarjetaOfertas />
+                {/* <TarjetaEmprendimiento /> */}
+                {/* <TarjetaOfertas /> */}
                 <ListaRutas />
+
+                <Aviso />
             </main>
 
             {/* Pie de página */}
