@@ -242,6 +242,34 @@ h1 {
   list-style: none;
 }
 
+/* Buscador del banner principal (componente React Buscador). */
+.buscador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.buscador input {
+  flex: 1 1 14rem;
+  padding: 0.7rem;
+  font: inherit;
+  border: 1px solid #767676;
+  border-radius: 6px;
+}
+
+.buscador input:focus,
+.buscador button:focus {
+  outline: 3px solid #9c3d00;
+  outline-offset: 3px;
+}
+
+.buscador button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
 /* En pantallas más grandes se muestran más columnas. */
 @media (min-width: 768px) {
   .encabezado-contenido {
