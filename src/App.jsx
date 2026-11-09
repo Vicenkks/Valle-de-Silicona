@@ -6,10 +6,7 @@ import BannerPrincipal from './componentes/banner-principal.jsx'
 import Footer from './componentes/footer.jsx'
 import Nav from './componentes/nav.jsx'
 import ListaRutas from './componentes/lista-rutas.jsx'
-// Pendientes: estos archivos todavía están vacíos en main y, si se importan,
-// React no carga la página ("does not provide an export named 'default'").
-// Cada responsable descomenta su import y su etiqueta al fusionar su componente.
-// import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
+import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
 import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
 
 export default function App() {
@@ -28,7 +25,7 @@ export default function App() {
                     subtitulo="Encuentra actividades, rutas y emprendimientos locales para planificar una visita conectada con el territorio."
                 />
 
-                {/* <TarjetaEmprendimiento /> */}
+                <TarjetaEmprendimiento />
                 <TarjetaOfertas /> 
                 <ListaRutas />
 
