@@ -10,7 +10,7 @@ import ListaRutas from './componentes/lista-rutas.jsx'
 // React no carga la página ("does not provide an export named 'default'").
 // Cada responsable descomenta su import y su etiqueta al fusionar su componente.
 // import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
-// import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
+import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
 
 export default function App() {
     return (
@@ -29,7 +29,7 @@ export default function App() {
                 />
 
                 {/* <TarjetaEmprendimiento /> */}
-                {/* <TarjetaOfertas /> */}
+                <TarjetaOfertas /> 
                 <ListaRutas />
 
                 <Aviso />
