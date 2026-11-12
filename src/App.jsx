@@ -1,33 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Routes, Route } from "react-router";
+import Nav from './componentes/nav.jsx';
+import Footer from './componentes/footer.jsx';
 
-// Importación de los componentes
-import Aviso from './componentes/aviso.jsx'
-import BannerPrincipal from './componentes/banner-principal.jsx'
-import Footer from './componentes/footer.jsx'
-import Nav from './componentes/nav.jsx'
-import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
-import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
-import TarjetaRuta from './componentes/tarjeta-ruta.jsx'
+import Inicio from './paginas/Inicio.jsx';
+import Rutas from './paginas/Rutas.jsx';
+import DetalleRuta from './paginas/DetalleRuta.jsx';
+import Emprendimientos from './paginas/Emprendimientos.jsx';
+import NoEncontrada from './paginas/NoEncontrada.jsx';
 
 export default function App() {
   return (
     <div className="app-container">
-      {/* Barra de navegación */}
       <Nav />
-
-      {/* Aviso importante o banner principal */}
-      <Aviso />
-      <BannerPrincipal />
-
-      {/* Contenido principal o tarjetas */}
+      
       <main>
-        <TarjetaEmprendimiento />
-        <TarjetaOfertas />
-        <TarjetaRuta />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/rutas" element={<Rutas />} />
+          <Route path="/rutas/:id" element={<DetalleRuta />} />
+          <Route path="/emprendimientos" element={<Emprendimientos />} />
+          <Route path="*" element={<NoEncontrada />} />
+        </Routes>
       </main>
 
-      {/* Pie de página */}
       <Footer />
     </div>
-  )
+  );
 }
