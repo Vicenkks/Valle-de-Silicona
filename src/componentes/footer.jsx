@@ -7,12 +7,12 @@ export default function PiePagina() {
         <ul className="enlaces-pie">
           <li>
             <a href="https://www.conaf.cl/" target="_blank" rel="noopener noreferrer">
-              CONAF <span className="solo-lector">(se abre en una pestaña nueva)</span>
+              CONAF <span className="sr-only">(se abre en una pestaña nueva)</span>
             </a>
           </li>
           <li>
             <a href="https://www.sernatur.cl/" target="_blank" rel="noopener noreferrer">
-              Sernatur <span className="solo-lector">(se abre en una pestaña nueva)</span>
+              Sernatur <span className="sr-only">(se abre en una pestaña nueva)</span>
             </a>
           </li>
         </ul>

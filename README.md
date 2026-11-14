@@ -39,8 +39,8 @@ Valle-de-Silicona/
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 2
-- Última actualización: 27 de octubre de 2026
+- Sprint actual: Sprint 3
+- Última actualización: 13 de octubre de 2026
 
 ## Tablero Kanban
 
