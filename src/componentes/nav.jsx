@@ -4,6 +4,7 @@ const enlaces = [
   { texto: "Inicio", ruta: "/" },
   { texto: "Rutas", ruta: "/rutas" },
   { texto: "Emprendimientos", ruta: "/emprendimientos" },
+  { texto: "Reseñas", ruta: "/resenas" },
 ];
 
 export default function Encabezado() {
