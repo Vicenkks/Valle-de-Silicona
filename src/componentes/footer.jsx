@@ -1,6 +1,6 @@
 export default function PiePagina() {
   return (
-    <footer className="pie-principal">
+    <footer className="pie">
       <div className="pie-contenido">
         <h2>EcoRutas</h2>
         <p>Información para descubrir La Araucanía con respeto por sus comunidades y naturaleza.</p>
