@@ -1,39 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Routes, Route } from "react-router";
+import Nav from './componentes/nav.jsx';
+import Footer from './componentes/footer.jsx';
 
-// Importación de los componentes
-import Aviso from './componentes/aviso.jsx'
-import BannerPrincipal from './componentes/banner-principal.jsx'
-import Footer from './componentes/footer.jsx'
-import Nav from './componentes/nav.jsx'
-import ListaRutas from './componentes/lista-rutas.jsx'
-import TarjetaEmprendimiento from './componentes/tarjeta-emprendimiento.jsx'
-import TarjetaOfertas from './componentes/tarjeta-ofertas.jsx'
+import Inicio from './paginas/Inicio.jsx';
+import Rutas from './paginas/Rutas.jsx';
+import DetalleRuta from './paginas/DetalleRuta.jsx';
+import Emprendimientos from './paginas/Emprendimientos.jsx';
+import NoEncontrada from './paginas/NoEncontrada.jsx';
 
 export default function App() {
-    return (
-        <div className="app-container">
-            {/* Barra de navegación */}
-            <Nav
-                enlaces={['Inicio', 'Actividades', 'Ofertas', 'Comunidad']}
-                paginaActual="Inicio"
-            />
+  return (
+    <div className="app-container">
+      <Nav />
+      
+      <main>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/rutas" element={<Rutas />} />
+          <Route path="/rutas/:id" element={<DetalleRuta />} />
+          <Route path="/emprendimientos" element={<Emprendimientos />} />
+          <Route path="*" element={<NoEncontrada />} />
+        </Routes>
+      </main>
 
-            {/* Contenido principal: banner, tarjetas y aviso */}
-            <main id="contenido" className="contenedor">
-                <BannerPrincipal
-                    titulo="Conoce La Araucanía de forma responsable"
-                    subtitulo="Encuentra actividades, rutas y emprendimientos locales para planificar una visita conectada con el territorio."
-                />
-
-                <TarjetaEmprendimiento />
-                <TarjetaOfertas /> 
-                <ListaRutas />
-
-                <Aviso />
-            </main>
-
-            {/* Pie de página */}
-            <Footer />
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
