@@ -309,6 +309,66 @@ main {
   text-decoration: none;
 }
 
+/* ---------- Página Rutas ---------- */
+.encabezado-rutas {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.encabezado-rutas h2 {
+  margin-bottom: 4px;
+}
+
+.subtitulo-rutas {
+  font-size: 14px;
+  color: #556655;
+}
+
+.filtros-rutas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.boton-filtro {
+  padding: 6px 14px;
+  border: 1.5px solid #1f7a4a;
+  border-radius: 20px;
+  background: transparent;
+  color: #1f7a4a;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.boton-filtro:hover,
+.boton-filtro.activo {
+  background: #1f7a4a;
+  color: #ffffff;
+}
+
+.fila-rutas {
+  flex-wrap: wrap;
+}
+
+.fila-rutas .tarjeta {
+  flex: 1 1 280px;
+}
+
+.mensaje-vacio {
+  padding: 24px;
+  border: 1px solid #e1e6e1;
+  border-radius: 12px;
+  text-align: center;
+  color: #556655;
+}
+
 /* ---------- Pantallas angostas ---------- */
 @media (max-width: 800px) {
   .encabezado,
