@@ -28,11 +28,13 @@ export default function Inicio() {
             />
           ))}
         </div>
-      </section>
 
-      <Link to="/rutas" className="boton">
-        Ver todas las rutas
-      </Link>
+        <div style={{ marginTop: "20px" }}>
+          <Link to="/rutas" className="boton">
+            Ver todas las rutas
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

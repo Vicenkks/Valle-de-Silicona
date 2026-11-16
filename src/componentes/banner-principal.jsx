@@ -14,7 +14,7 @@ import fotoConguillio from "../../img/parque-conguillio.jpg";
 
 export default function BannerPrincipal({ titulo, subtitulo }) {
   return (
-    <section className="hero" aria-labelledby="titulo-principal">
+    <section className="banner" aria-labelledby="titulo-principal">
       <div>
         <h1 id="titulo-principal">{titulo}</h1>
         <p className="introduccion">{subtitulo}</p>
@@ -24,10 +24,11 @@ export default function BannerPrincipal({ titulo, subtitulo }) {
         </a>
       </div>
       <img
-        className="hero-imagen"
+        className="banner-imagen"
         src={fotoConguillio}
         alt="Paisaje del Parque Nacional Conguillío"
       />
     </section>
   );
 }
+
