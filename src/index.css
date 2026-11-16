@@ -79,58 +79,141 @@ input:focus-visible {
   border-bottom: 2px solid #1f7a4a;
 }
 
-/* ---------- Banner y buscador ---------- */
 .banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 34px;
-  color: #ffffff;
-  background: linear-gradient(100deg, #1f5e3b, #2f8a57 60%, #5aa66f);
+  gap: 40px;
+  padding: 30px 34px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 10px 34px 30px;
+}
+
+.banner > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 1 440px;
 }
 
 .banner h2 {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1.15;
+  color: #133c24;
 }
 
 .banner p {
-  margin-top: 4px;
   font-size: 15px;
-  opacity: 0.9;
+  color: #33443a;
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 
-.buscador {
+/* ---------- Buscador integrado y ordenado ---------- */
+.banner .buscador {
   display: flex;
   gap: 8px;
+  width: 100%;
+  max-width: 460px;
 }
 
-.buscador input {
-  width: 300px;
-  max-width: 60vw;
-  height: 40px;
+.banner .buscador input {
+  flex: 1;
+  height: 42px;
   padding: 0 14px;
-  border: 0;
+  border: 1.5px solid #d1dcd2;
   border-radius: 8px;
+  background-color: #ffffff;
+  color: #1e2a22;
   font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
-.buscador button {
-  height: 40px;
-  padding: 0 18px;
+.banner .buscador input:focus {
+  border-color: #1f7a4a;
+  outline: none;
+}
+
+.banner .buscador button {
+  height: 42px;
+  padding: 0 20px;
   border: 0;
   border-radius: 8px;
-  background: #f9a826;
-  color: #1e2761;
+  background: #133c24;
+  color: #ffffff;
   font: inherit;
   font-weight: 700;
+  font-size: 13px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-/* ---------- Contenido ---------- */
+.banner .buscador button:hover {
+  background: #1f5e3b;
+}
+
+/* ---------- Botón secundario cohesivo ("Explorar actividades") ---------- */
+.banner .boton-explorar {
+  display: inline-block;
+  background-color: transparent;
+  color: #1f7a4a;
+  border: 1.5px solid #1f7a4a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+}
+
+.banner .boton-explorar:hover {
+  background-color: #1f7a4a;
+  color: #ffffff;
+}
+
+/* ---------- Imagen del Banner ---------- */
+.banner-imagen {
+  width: 100%;
+  max-width: 480px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.banner-imagen {
+  width: 100%;
+  max-width: 460px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Botón sólido institucional de "Explorar actividades" */
+.banner .boton-explorar {
+  display: inline-block;
+  background-color: #133c24;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.banner .boton-explorar:hover {
+  background-color: #1f5e3b;
+}/* ---------- Contenido ---------- */
 main {
   padding-bottom: 32px;
 }
@@ -393,7 +476,27 @@ main {
     align-items: flex-start;
   }
 
-  .banner,
+  .banner {
+    margin: 10px 16px;
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
+
+  .banner .buscador {
+    max-width: 100%;
+  }
+
+  .banner-imagen {
+    max-width: 100%;
+    height: 220px;
+  }
+
   .lista,
   .encabezado,
   .pie {
@@ -405,4 +508,15 @@ main {
     margin-left: 16px;
     margin-right: 16px;
   }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
