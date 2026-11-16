@@ -224,7 +224,7 @@ main {
   text-decoration: none;
 }
 
-/* ---------- Tarjeta de emprendimiento ---------- */
+/* ---------- Tarjeta y pag de emprendimiento ---------- */
 .emprendimiento {
   flex: 1;
   display: flex;
@@ -233,6 +233,18 @@ main {
   padding: 14px 12px;
   border: 1px solid #e1e6e1;
   border-radius: 10px;
+}
+
+.subtitulo-emprendimientos {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #556655;
+}
+
+.descripcion-emprendimiento {
+  font-size: 13px;
+  color: #556655;
+  margin-top: 4px;
 }
 
 .icono {
