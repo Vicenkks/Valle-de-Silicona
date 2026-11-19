@@ -1,0 +1,116 @@
+{
+  "rutas": [
+    {
+      "id": 1,
+      "nombre": "Feria Rain Mapu",
+      "distanciaKm": 2,
+      "dificultad": "baja",
+      "accesible": true,
+      "descripcion": "Sabores y productos locales en Teodoro Schmidt.",
+      "enlaceTexto": "Conocer emprendimientos",
+      "enlaceUrl": "#",
+      "imagen": "img/feria-rain-mapu.jpg",
+      "alt": "Productos a la venta en una feria local"
+    },
+    {
+      "id": 2,
+      "nombre": "Ofertas Populares",
+      "distanciaKm": 8,
+      "dificultad": "media",
+      "accesible": false,
+      "descripcion": "Revisa las ultimas ofertas del momento.",
+      "enlaceTexto": "Ver ofertas",
+      "enlaceUrl": "#",
+      "imagen": "img/ofertas.jpeg",
+      "alt": "Ofertas de emprendimientos locales"
+    },
+    {
+      "id": 3,
+      "nombre": "Río Toltén",
+      "distanciaKm": 5,
+      "dificultad": "baja",
+      "accesible": true,
+      "descripcion": "Panoramas al aire libre con preparación y cuidado.",
+      "enlaceTexto": "Ver ficha de ruta",
+      "enlaceUrl": "#",
+      "imagen": "img/pesca-salmones.jpg",
+      "alt": "Dos personas pescando en el río Toltén"
+    },
+    {
+      "id": 4,
+      "nombre": "Parque Nacional Conguillío",
+      "distanciaKm": 5,
+      "dificultad": "media",
+      "accesible": true,
+      "descripcion": "Senderos entre araucarias, lagunas y vistas volcánicas.",
+      "enlaceTexto": "Ver ficha de ruta",
+      "enlaceUrl": "/rutas/4",
+      "imagen": "img/parque-conguillio.jpg",
+      "alt": "Araucarias y paisaje volcánico en el Parque Nacional Conguillío"
+    },
+    {
+      "id": 5,
+      "nombre": "Termas de Coñaripe",
+      "distanciaKm": 5,
+      "dificultad": "baja",
+      "accesible": true,
+      "descripcion": "Relájate en un entorno natural junto a lagos y bosques. Confirma horarios y reservas.",
+      "enlaceTexto": "Ver ficha de ruta",
+      "enlaceUrl": "/rutas/5",
+      "imagen": "img/termas-conaripe.jpg",
+      "alt": "Termas rodeadas de vegetación en Coñaripe"
+    }
+  ],
+  "emprendimientos": [
+    {
+      "id": 1,
+      "titulo": "Feria Rain Mapu",
+      "descripcion": "Sabores y productos locales en Teodoro Schmidt.",
+      "etiqueta": "Gastronomía",
+      "imagen": "img/feria-rain-mapu.jpg",
+      "rutaAsociadaId": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Mercado Modelo",
+      "descripcion": "Un espacio para conocer productos, artesanía y sabores de la región.",
+      "etiqueta": "Comercio local",
+      "imagen": "img/mercado-modelo.jpg",
+      "rutaAsociadaId": 2
+    },
+    {
+      "id": 3,
+      "titulo": "Servicios de Villarrica",
+      "descripcion": "Infórmate en los puntos turísticos locales antes de recorrer la comuna.",
+      "etiqueta": "Turismo local",
+      "imagen": "img/centro-villarrica.jpg",
+      "rutaAsociadaId": 3
+    }
+  ],
+  "resenas": [
+    {
+      "id": 1,
+      "actividadId": 3,
+      "nombre": "juanita",
+      "comentario": "La ruta está muy buena",
+      "fecha": "11-11-2026",
+      "puntuacion": 10
+    },
+    {
+      "id": 2,
+      "actividadId": 1,
+      "nombre": "rondamon",
+      "comentario": "Muy buenos productos y buena atención.",
+      "fecha": "12-11-2026",
+      "puntuacion": 9
+    },
+    {
+      "id": 3,
+      "actividadId": 2,
+      "nombre": "pedro",
+      "comentario": "Las ofertas no estaban tan actualizadas.",
+      "fecha": "13-11-2026",
+      "puntuacion": 6
+    }
+  ]
+}
