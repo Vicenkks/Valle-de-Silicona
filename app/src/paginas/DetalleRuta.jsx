@@ -1,25 +1,67 @@
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
-import { rutas } from "../datos/rutas.js";
-import { resenas } from "../datos/resenas.js";
 import TarjetaResena from "../componentes/tarjeta-resena.jsx";
+import { API_URL } from "../api.js";
 
 export default function DetalleRuta() {
   const { id } = useParams();
-  const ruta = rutas.find((r) => r.id === Number(id));
+  const [ruta, setRuta] = useState(null);
+  const [resenasDeRuta, setResenasDeRuta] = useState([]);
+  const [cargando, setCargando] = useState(true);
+  const [noEncontrada, setNoEncontrada] = useState(false);
 
-  if (!ruta) {
+  useEffect(() => {
+    setCargando(true);
+    setNoEncontrada(false);
+
+    fetch(`${API_URL}/rutas/${id}`)
+      .then((respuesta) => {
+        if (respuesta.status === 404 || !respuesta.ok) {
+          setNoEncontrada(true);
+          return null;
+        }
+        return respuesta.json();
+      })
+      .then((datosRuta) => {
+        if (!datosRuta) return;
+        setRuta(datosRuta);
+
+        // Pide las reseñas asociadas a esta ruta
+        return fetch(`${API_URL}/resenas?actividadId=${datosRuta.id}`)
+          .then((res) => (res.ok ? res.json() : []))
+          .then((datosResenas) => {
+            setResenasDeRuta(datosResenas);
+          });
+      })
+      .catch(() => {
+        setNoEncontrada(true);
+      })
+      .finally(() => {
+        setCargando(false);
+      });
+  }, [id]);
+
+  if (cargando) {
+    return (
+      <section className="lista" aria-labelledby="titulo-detalle">
+        <h1 id="titulo-detalle">Cargando ruta...</h1>
+        <p>Obteniendo los datos desde el servidor.</p>
+      </section>
+    );
+  }
+
+  if (noEncontrada || !ruta) {
     return (
       <section className="lista" aria-labelledby="titulo-detalle">
         <h1 id="titulo-detalle">Ruta no encontrada</h1>
         <p>No existe una ruta con el número {id}.</p>
+        <br />
         <Link to="/rutas" className="boton">
           Volver a las rutas
         </Link>
       </section>
     );
   }
-
-  const resenasDeRuta = resenas.filter((r) => r.actividadId === ruta.id);
 
   return (
     <>
