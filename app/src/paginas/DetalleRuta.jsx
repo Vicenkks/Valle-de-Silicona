@@ -1,40 +1,36 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
-import TarjetaResena from "../componentes/tarjeta-resena.jsx";
+import Resenas from "../componentes/Resenas.jsx";
 import { API_URL } from "../api.js";
 
 export default function DetalleRuta() {
   const { id } = useParams();
   const [ruta, setRuta] = useState(null);
-  const [resenasDeRuta, setResenasDeRuta] = useState([]);
+  const [error, setError] = useState("");
   const [cargando, setCargando] = useState(true);
   const [noEncontrada, setNoEncontrada] = useState(false);
 
   useEffect(() => {
     setCargando(true);
     setNoEncontrada(false);
+    setError("");
+    setRuta(null);
 
     fetch(`${API_URL}/rutas/${id}`)
       .then((respuesta) => {
-        if (respuesta.status === 404 || !respuesta.ok) {
+        if (respuesta.status === 404) {
           setNoEncontrada(true);
           return null;
         }
+        if (!respuesta.ok) throw new Error(`La API respondió ${respuesta.status}`);
         return respuesta.json();
       })
       .then((datosRuta) => {
         if (!datosRuta) return;
         setRuta(datosRuta);
-
-        // Pide las reseñas asociadas a esta ruta
-        return fetch(`${API_URL}/resenas?actividadId=${datosRuta.id}`)
-          .then((res) => (res.ok ? res.json() : []))
-          .then((datosResenas) => {
-            setResenasDeRuta(datosResenas);
-          });
       })
       .catch(() => {
-        setNoEncontrada(true);
+        setError("No se pudo cargar la ruta. ¿Está corriendo la API?");
       })
       .finally(() => {
         setCargando(false);
@@ -49,6 +45,8 @@ export default function DetalleRuta() {
       </section>
     );
   }
+
+  if (error) return <p className="lista estado error" role="alert">{error}</p>;
 
   if (noEncontrada || !ruta) {
     return (
@@ -96,27 +94,7 @@ export default function DetalleRuta() {
         </article>
       </section>
 
-      <section className="lista" aria-labelledby="titulo-resenas">
-        <h2 id="titulo-resenas">
-          Reseñas de esta ruta ({resenasDeRuta.length})
-        </h2>
-        {resenasDeRuta.length === 0 ? (
-          <p className="mensaje-vacio">Aún no hay reseñas para esta ruta.</p>
-        ) : (
-          <div className="fila">
-            {resenasDeRuta.map((resena) => (
-              <TarjetaResena
-                key={resena.id}
-                nombre={resena.nombre}
-                actividad={ruta.nombre}
-                comentario={resena.comentario}
-                fecha={resena.fecha}
-                puntuacion={resena.puntuacion}
-              />
-            ))}
-          </div>
-        )}
-      </section>
+      <Resenas rutaId={ruta.id} />
     </>
   );
 }
