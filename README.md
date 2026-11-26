@@ -77,6 +77,15 @@ Para compilar React, ejecutar `npm run build` dentro de `app`.
 GitHub Pages no ejecuta json-server: la demostración de la API propia se realiza
 localmente con ambos servidores encendidos.
 
+## API pública externa
+
+- **Nombre:** Open-Meteo (Air Quality API)
+- **URL base:** `https://air-quality-api.open-meteo.com/v1/air-quality`
+- **Endpoint utilizado:** `?latitude=-38.74&longitude=-72.60&current=pm2_5,pm10,uv_index`
+- **Autenticación:** No requiere clave (*API key*) ni registro.
+- **Vista donde aparece:** Inicio (`app/src/paginas/Inicio.jsx`), mediante el componente `CalidadAire.jsx`.
+- **Utilidad para el usuario:** Permite consultar en vivo los niveles de material particulado (PM 2,5 y PM 10) y el índice UV en Temuco antes de planificar una salida al aire libre.
+
 ## Estado del proyecto
 
 - Sprint actual: Sprint 3
@@ -87,5 +96,6 @@ localmente con ambos servidores encendidos.
 Enlace al tablero: https://trello.com/invite/b/6a7dd26c5f91dc253e750160/ATTIc3e52326d5f21e7cf5f390e0e5718ad33A1C425B/valle-de-silicona-frontend
 
 ## Enlace de despliegue
-https://vicenkks.github.io/Valle-de-Silicona/
 
+- Sitio estático: https://vicenkks.github.io/Valle-de-Silicona/
+- Aplicación React: https://vicenkks.github.io/Valle-de-Silicona/aplicacion/
