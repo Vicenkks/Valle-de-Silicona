@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { API_URL } from "../api.js";
 import BannerPrincipal from "../componentes/banner-principal.jsx";
 import TarjetaRuta from "../componentes/tarjeta-ruta.jsx";
+import CalidadAire from "../componentes/CalidadAire.jsx";
 
 export default function Inicio() {
   const [rutas, setRutas] = useState([]);
@@ -26,22 +27,8 @@ export default function Inicio() {
     cargarRutas();
   }, []);
 
-  if (cargando) {
-    return (
-      <p className="lista estado" role="status">
-        Cargando rutas...
-      </p>
-    );
-  }
-
-  if (error) {
-    return (
-      <p className="lista estado error" role="alert">
-        {error}
-      </p>
-    );
-  }
-
+  // Los estados de carga y error quedan dentro de la sección de rutas:
+  // si la API propia falla, el resto de la vista (y la API externa) sigue.
   return (
     <>
       <BannerPrincipal
@@ -51,21 +38,33 @@ export default function Inicio() {
 
       <section className="lista">
         <h2>Rutas destacadas</h2>
-        <div className="fila">
-          {rutas.slice(0, 3).map((ruta) => (
-            <TarjetaRuta
-              key={ruta.id}
-              id={ruta.id}
-              nombre={ruta.nombre}
-              distanciaKm={ruta.distanciaKm}
-              dificultad={ruta.dificultad}
-              accesible={ruta.accesible}
-              descripcion={ruta.descripcion}
-              enlaceTexto={ruta.enlaceTexto}
-              enlaceUrl={ruta.enlaceUrl}
-            />
-          ))}
-        </div>
+        {cargando && (
+          <p className="estado" role="status">
+            Cargando rutas...
+          </p>
+        )}
+        {error && (
+          <p className="estado error" role="alert">
+            {error}
+          </p>
+        )}
+        {!cargando && !error && (
+          <div className="fila">
+            {rutas.slice(0, 3).map((ruta) => (
+              <TarjetaRuta
+                key={ruta.id}
+                id={ruta.id}
+                nombre={ruta.nombre}
+                distanciaKm={ruta.distanciaKm}
+                dificultad={ruta.dificultad}
+                accesible={ruta.accesible}
+                descripcion={ruta.descripcion}
+                enlaceTexto={ruta.enlaceTexto}
+                enlaceUrl={ruta.enlaceUrl}
+              />
+            ))}
+          </div>
+        )}
 
         <div style={{ marginTop: "20px" }}>
           <Link to="/rutas" className="boton">
@@ -73,6 +72,8 @@ export default function Inicio() {
           </Link>
         </div>
       </section>
+
+      <CalidadAire />
     </>
   );
 }
