@@ -618,3 +618,49 @@ main {
   min-height: 1.4em;
   font-size: 14px;
 }
+
+
+.aviso-publicacion {
+  margin: 0;
+  padding: 12px 20px;
+  background-color: #fff3cd;
+  color: #664d03;
+  border-bottom: 1px solid #ffecb5;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.calidad-aire {
+  margin: 24px auto;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 12px;
+  background-color: #f2f7f3;
+  border: 1px solid #d5e5d8;
+}
+
+.calidad-aire h2 {
+  margin-bottom: 12px;
+  color: #24543a;
+}
+
+.calidad-aire .estado {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.calidad-aire .error {
+  color: #a3261b;
+}
+
+.calidad-aire .fuente {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.calidad-aire .fuente a {
+  color: #24543a;
+  font-weight: 600;
+}

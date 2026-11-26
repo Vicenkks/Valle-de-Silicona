@@ -9,6 +9,7 @@ import DetalleRuta from './paginas/DetalleRuta.jsx';
 import Emprendimientos from './paginas/Emprendimientos.jsx';
 import Listado2 from './paginas/Listado2.jsx';
 import NoEncontrada from './paginas/NoEncontrada.jsx';
+import AvisoPublicacion from './componentes/AvisoPublicacion.jsx';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Nav />
       
       <main>
+        <AvisoPublicacion />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/rutas" element={<Rutas />} />
