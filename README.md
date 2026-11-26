@@ -5,12 +5,12 @@ Proyecto grupal para Front-End.
 
 | Nombre | Rol ágil |
 |---|---|
-| Javier E. Gutierrez | QA/Tester |
+| Javier E. Gutierrez | Scrum Master |
 | Rallen I. Castro | Developer |
-| Vicente J. Huilcaman | Developer |
+| Vicente J. Huilcaman | QA/Tester |
 | Keisy D. Epul| QA/Tester |
 | Josefa I. Duarte | Product Owner |
-| Maria R. Henríquez | Scrum Master |
+| Maria R. Henríquez | Developer |
 
 ## Descripción breve
 EcoRuta es un sitio web en el que puedes planificar tus salidas hacia el sur de chile, con rutas guiadas y economicas.
@@ -20,16 +20,19 @@ EcoRuta es un sitio web en el que puedes planificar tus salidas hacia el sur de 
 - HTML5 semántico
 - CSS3 con enfoque mobile-first
 - Diseño responsivo y accesible (criterios base de WCAG AA)
-
+- React + Vite (`HashRouter`) y `json-server` para API REST local
 
 ## Estructura del proyecto
 ```text
 Valle-de-Silicona/
-├── css/            # Estilos del sitio (CSS)
-├── js/             # Scripts y lógica (JavaScript)
+├── app/            # Aplicación React + Vite y API local (db.json)
+├── aplicacion/     # Build de producción publicado en GitHub Pages
+├── docs/           # Documentación y entregables del proyecto
+├── css/            # Estilos del sitio estático (CSS)
+├── js/             # Scripts y lógica del sitio estático (JavaScript)
 ├── img/            # Imágenes y recursos gráficos
-├── pages/          # Páginas secundarias (HTML)
-└── index.html      # Página principal
+├── pages/          # Páginas secundarias del sitio estático (HTML)
+└── index.html      # Página principal del sitio estático
 ```
 ## Cómo ejecutar el proyecto
 
@@ -83,13 +86,20 @@ localmente con ambos servidores encendidos.
 - **URL base:** `https://air-quality-api.open-meteo.com/v1/air-quality`
 - **Endpoint utilizado:** `?latitude=-38.74&longitude=-72.60&current=pm2_5,pm10,uv_index`
 - **Autenticación:** No requiere clave (*API key*) ni registro.
+- **Prueba CORS:** Aprobada. La API responde con cabeceras CORS abiertas (`Access-Control-Allow-Origin: *`), permitiendo peticiones `fetch` directas desde el navegador tanto en `localhost` como en GitHub Pages sin proxy.
 - **Vista donde aparece:** Inicio (`app/src/paginas/Inicio.jsx`), mediante el componente `CalidadAire.jsx`.
 - **Utilidad para el usuario:** Permite consultar en vivo los niveles de material particulado (PM 2,5 y PM 10) y el índice UV en Temuco antes de planificar una salida al aire libre.
 
+## Verificación QA (Publicación y APIs)
+
+- **Entorno publicado:** Comprobado el aviso de versión publicada, carga de recursos con rutas relativas, enlace de navegación hacia `aplicacion/` y enrutamiento mediante `HashRouter` sin errores `404`.
+- **Resiliencia ante fallos:** Validado mediante bloqueo de URL en DevTools (*Network*) que tanto la indisponibilidad de la API propia (`json-server`) como de la API externa (`Open-Meteo`) muestran mensajes controlados dentro de su propia sección sin interrumpir el resto de la interfaz.
+- **Diseño responsivo:** Revisada la visualización móvil (`414px`) sin desbordamiento horizontal ni errores en consola.
+
 ## Estado del proyecto
 
-- Sprint actual: Sprint 3
-- Última actualización: 13 de octubre de 2026
+- Sprint actual: Sprint 4
+- Última actualización: 26 de noviembre de 2026
 
 ## Tablero Kanban
 
